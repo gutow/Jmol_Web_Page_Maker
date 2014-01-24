@@ -1,0 +1,215 @@
+# Jmol state version 11.4.4  2007-12-20 06:37;
+
+function _setWindowState();
+# height 495;
+# width 490;
+  stateVersion = 1104004;
+  backgroundColor = "[x000000]";
+  axis1Color = "[xff0000]";
+  axis2Color = "[x008000]";
+  axis3Color = "[x0000ff]";
+  ambientPercent = 45;
+  diffusePercent = 84;
+  specular = true;
+  specularPercent = 22;
+  specularPower = 40;
+  specularExponent = 6;
+  statusReporting  = true;
+end function;
+
+function _setFileState();
+
+  allowEmbeddedScripts = false;
+  set autoBond true;
+  set appendNew true;
+  set appletProxy "";
+  set applySymmetryToBonds false;
+  set bondRadiusMilliAngstroms 150;
+  set bondTolerance 0.45;
+  set defaultDirectory "";
+  set defaultLattice {0.0 0.0 0.0};
+  set defaultLoadScript "";
+  set loadFormat "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  set forceAutoBond false;
+  set minBondDistance 0.4;
+  set percentVdwAtom 20;
+  set smartAromatic true;
+  load /*file*/"1lcd.pdb1.gz";
+
+end function;
+
+function _setVariableState();
+
+   set defaultanglelabel "%VALUE %UNITS";
+   set defaultcolorscheme "Jmol";
+   set defaultdirectory "";
+   set defaultdistancelabel "%VALUE %UNITS";
+   set defaultdrawarrowscale 0.5;
+   set defaultlattice "{0 0 0}";
+   set defaultloadscript "";
+   set defaulttorsionlabel "%VALUE %UNITS";
+   set defaulttranslucent 0.5;
+  set allowembeddedscripts true;
+  set allowrotateselected false;
+  set appletproxy "";
+  set applysymmetrytobonds false;
+  set autobond true;
+  set autofps false;
+  set axes window;
+  set axesmode 0;
+  set axesscale 2.0;
+  set bondmodeor false;
+  set bondradiusmilliangstroms 150;
+  set bondtolerance 0.45;
+  set cartoonrockets false;
+  set chaincasesensitive false;
+  set dataseparator "~~~";
+  set dipolescale 1.0;
+  set disablepopupmenu false;
+  set displaycellparameters true;
+  set dotsselectedonly false;
+  set dotsurface true;
+  set drawpicking false;
+  set dynamicmeasurements false;
+  set forceautobond false;
+  set greyscalerendering false;
+  set hbondsbackbone false;
+  set hbondssolid false;
+  set helppath "http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm";
+  set hermitelevel 0;
+  set hidenameinpopup false;
+  set hidenavigationpoint false;
+  set highresolution false;
+  set historylevel 0;
+  set hoverdelay 0.5;
+  set isosurfacepropertysmoothing true;
+  set justifymeasurements false;
+  set loadformat "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  set measureallmodels false;
+  set measurementlabels true;
+  set minbonddistance 0.4;
+  set navigationperiodic false;
+  set navigationspeed 5.0;
+  set percentvdwatom 20;
+  set pickingspinrate 10;
+  set propertyatomnumberfield 0;
+  set propertycolorscheme "roygb";
+  set propertydatafield 0;
+  set rangeselected false;
+  set ribbonaspectratio 16;
+  set ribbonborder false;
+  set rocketbarrels false;
+  set selecthetero true;
+  set selecthydrogen true;
+  set sheetsmoothing 1.0;
+  set showhiddenselectionhalos false;
+  set showhydrogens true;
+  set showmeasurements true;
+  set showmultiplebonds true;
+  set shownavigationpointalways false;
+  set smartaromatic true;
+  set solventprobe false;
+  set solventproberadius 1.2;
+  set ssbondsbackbone false;
+  set stereodegrees 5;
+  set strandcountformeshribbon 7;
+  set strandcountforstrands 5;
+  set testflag1 false;
+  set testflag2 false;
+  set testflag3 false;
+  set testflag4 false;
+  set tracealpha true;
+  set usenumberlocalization true;
+  set vectorscale 1.0;
+  set vibrationperiod 0.5;
+  set vibrationscale 0.5;
+  set wireframerotation false;
+  set zoomlarge true;
+  set zshade false;
+
+#user-defined variables; 
+# --none--;
+
+# label defaults;
+  select none;
+  color label none;
+  background label none;
+  set labelOffset 4 4;
+  set labelAlignment left;
+  set labelPointer off;
+  font label 13 SansSerif Plain;
+
+end function;
+
+function _setModelState();
+
+  structure helix ({531:620})    	# model=1.1 & (5 - 14);
+  structure helix ({629:731})    	# model=1.1 & (16 - 25);
+  structure helix ({779:918})    	# model=1.1 & (31 - 45);
+  structure helix ({1668:1757})    	# model=1.2 & (5 - 14);
+  structure helix ({1766:1868})    	# model=1.2 & (16 - 25);
+  structure helix ({1916:2055})    	# model=1.2 & (31 - 45);
+  structure helix ({2793:2882})    	# model=1.3 & (5 - 14);
+  structure helix ({2891:2993})    	# model=1.3 & (16 - 25);
+  structure helix ({3041:3180})    	# model=1.3 & (31 - 45);
+
+  measures delete;
+  select *; set measures nanometers;
+  font measures 15 SansSerif Plain;
+  select measures ({null});
+
+  boundBox off;
+
+  frank on;
+  font frank 16 SansSerif Bold;
+
+end function;
+
+function _setFrameState();
+# frame state;
+# modelCount 3;
+# first 1.1;
+# last 1.3;
+  frame RANGE 1.1 1.3;
+  animation DIRECTION +1;
+  animation FPS 10;
+  animation MODE ONCE 0.0 0.0;
+  frame 1.3;
+  animation OFF;
+end function;
+
+function _setPerspectiveState();
+  set perspectiveModel 11;
+  set scaleAngstromsPerInch 0.0;
+  set perspectiveDepth true;
+  set visualRange 5.0;
+  set cameraDepth 3.0;
+  boundbox corners {7.41 6.2599983 3.7700005} {34.93 47.18 50.82} # volume = 52983.875;
+  center {21.17 26.72 27.295};
+  moveto 0.0 { 0 0 -1000 1.0} 129.16 0.0 0.1 {21.17 26.72 27.295} 27.544636 {0.0 0.0 0.0} -43.14341 52.01263 50.0;;
+  slab 100;depth 0;
+  set spinX 0; set spinY 30; set spinZ 0; set spinFps 30;
+end function;
+
+function _setSelectionState();
+  select ({0:3383});
+  set hideNotSelected false;
+end function;
+
+function _setState();
+  initialize;
+  set refreshing false;
+  _setWindowState;
+  _setFileState;
+  _setVariableState;
+  _setModelState;
+  _setFrameState;
+  _setPerspectiveState;
+  _setSelectionState;
+  set refreshing true;
+  set antialiasDisplay false;
+  set antialiasTranslucent true;
+  set antialiasImages true;
+end function;
+
+_setState;

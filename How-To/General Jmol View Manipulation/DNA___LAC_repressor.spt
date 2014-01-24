@@ -1,0 +1,238 @@
+# Jmol state version 11.4.4  2007-12-20 06:37;
+
+function _setWindowState();
+# height 507;
+# width 508;
+  stateVersion = 1104004;
+  backgroundColor = "[x000000]";
+  axis1Color = "[xff0000]";
+  axis2Color = "[x008000]";
+  axis3Color = "[x0000ff]";
+  ambientPercent = 45;
+  diffusePercent = 84;
+  specular = true;
+  specularPercent = 22;
+  specularPower = 40;
+  specularExponent = 6;
+  statusReporting  = true;
+end function;
+
+function _setFileState();
+
+  allowEmbeddedScripts = false;
+  set autoBond true;
+  set appendNew true;
+  set appletProxy "";
+  set applySymmetryToBonds false;
+  set bondRadiusMilliAngstroms 150;
+  set bondTolerance 0.45;
+  set defaultDirectory "";
+  set defaultLattice {0.0 0.0 0.0};
+  set defaultLoadScript "";
+  set loadFormat "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  set forceAutoBond false;
+  set minBondDistance 0.4;
+  set percentVdwAtom 20;
+  set smartAromatic true;
+  load /*file*/"1lcd.pdb1.gz";
+
+end function;
+
+function _setVariableState();
+
+   set defaultanglelabel "%VALUE %UNITS";
+   set defaultcolorscheme "Jmol";
+   set defaultdirectory "";
+   set defaultdistancelabel "%VALUE %UNITS";
+   set defaultdrawarrowscale 0.5;
+   set defaultlattice "{0 0 0}";
+   set defaultloadscript "";
+   set defaulttorsionlabel "%VALUE %UNITS";
+   set defaulttranslucent 0.5;
+  set allowembeddedscripts true;
+  set allowrotateselected false;
+  set appletproxy "";
+  set applysymmetrytobonds false;
+  set autobond true;
+  set autofps false;
+  set axes window;
+  set axesmode 0;
+  set axesscale 2.0;
+  set bondmodeor false;
+  set bondradiusmilliangstroms 150;
+  set bondtolerance 0.45;
+  set cartoonrockets false;
+  set chaincasesensitive false;
+  set dataseparator "~~~";
+  set dipolescale 1.0;
+  set disablepopupmenu false;
+  set displaycellparameters true;
+  set dotsselectedonly false;
+  set dotsurface true;
+  set drawpicking false;
+  set dynamicmeasurements false;
+  set forceautobond false;
+  set greyscalerendering false;
+  set hbondsbackbone false;
+  set hbondssolid false;
+  set helppath "http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm";
+  set hermitelevel 0;
+  set hidenameinpopup false;
+  set hidenavigationpoint false;
+  set highresolution false;
+  set historylevel 0;
+  set hoverdelay 0.5;
+  set isosurfacepropertysmoothing true;
+  set justifymeasurements false;
+  set loadformat "http://www.rcsb.org/pdb/files/%FILE.pdb";
+  set measureallmodels false;
+  set measurementlabels true;
+  set minbonddistance 0.4;
+  set navigationperiodic false;
+  set navigationspeed 5.0;
+  set percentvdwatom 20;
+  set pickingspinrate 10;
+  set propertyatomnumberfield 0;
+  set propertycolorscheme "roygb";
+  set propertydatafield 0;
+  set rangeselected false;
+  set ribbonaspectratio 16;
+  set ribbonborder false;
+  set rocketbarrels false;
+  set selecthetero true;
+  set selecthydrogen true;
+  set sheetsmoothing 1.0;
+  set showhiddenselectionhalos false;
+  set showhydrogens true;
+  set showmeasurements true;
+  set showmultiplebonds true;
+  set shownavigationpointalways false;
+  set smartaromatic true;
+  set solventprobe false;
+  set solventproberadius 1.2;
+  set ssbondsbackbone false;
+  set stereodegrees 5;
+  set strandcountformeshribbon 7;
+  set strandcountforstrands 5;
+  set testflag1 false;
+  set testflag2 false;
+  set testflag3 false;
+  set testflag4 false;
+  set tracealpha true;
+  set usenumberlocalization true;
+  set vectorscale 1.0;
+  set vibrationperiod 0.5;
+  set vibrationscale 0.5;
+  set wireframerotation false;
+  set zoomlarge true;
+  set zshade false;
+
+#user-defined variables; 
+# --none--;
+
+# label defaults;
+  select none;
+  color label none;
+  background label none;
+  set labelOffset 4 4;
+  set labelAlignment left;
+  set labelPointer off;
+  font label 13 SansSerif Plain;
+
+end function;
+
+function _setModelState();
+
+  structure helix ({531:620})    	# model=1.1 & (5 - 14);
+  structure helix ({629:731})    	# model=1.1 & (16 - 25);
+  structure helix ({779:918})    	# model=1.1 & (31 - 45);
+  structure helix ({1668:1757})    	# model=1.2 & (5 - 14);
+  structure helix ({1766:1868})    	# model=1.2 & (16 - 25);
+  structure helix ({1916:2055})    	# model=1.2 & (31 - 45);
+  structure helix ({2793:2882})    	# model=1.3 & (5 - 14);
+  structure helix ({2891:2993})    	# model=1.3 & (16 - 25);
+  structure helix ({3041:3180})    	# model=1.3 & (31 - 45);
+
+  select ({2272 2275 2277 2294:2296 2299 2301 2309 2312 2316:2318 2321 2323 2330 2333 2337:2339 2342 2344 2354 2361:2363 2366 2368 2376 2379 2383:2385 2388 2390 2400 2407:2409 2412 2414 2430:2432 2435 2437 2448 2455:2457 2460 2462 2470 2476:2478 2481 2483 2494 2501:2503 2506 2508 2516 2522 2525 2527 2539 2546:2548 2551 2553 2561 2567:2569 2572 2574 2582 2585 2589:2591 2594 2596 2603 2609:2611 2614 2616 2632:2634 2637 2639 2647 2653:2655 2658 2660 2676:2678 2681 2683 2699:2701 2704 2706 2714 2717 2721:2723 2726 2728 2735 2738 2742:2744 2747 2749 2757 2768 2781 2788 2796 2798 2805 2814 2822 2828 2831 2832 2837 2845 2851 2855 2856 2861 2869 2875 2881 2886 2894 2896 2902 2910 2916 2920 2928 2930 2937 2945 2947 2953 2970 2978 2986 2989 2997 3001 3009 3015 3017 3023 3036 3044 3046 3052 3058 3071 3073 3080 3097 3101 3102 3107 3120 3128 3132 3133 3138 3144 3150 3159 3165 3169 3170 3175 3184 3187 3195 3203 3209 3218 3225 3228 3236 3244 3252 3255 3258 3261 3264 3267 3270 3273 3276 3279 3282 3285 3288 3291 3294 3297 3300 3303 3306 3309 3312 3315 3318 3321 3324 3327 3330 3333 3336 3339 3342 3345 3348 3351 3354 3357 3360 3363 3366 3369 3372 3375 3378 3381});
+  Spacefill 0.34;
+  select ({2760 3153});
+  Spacefill 0.4;
+  select ({2263 2265 2266 2269 2271 2273 2274 2276 2278 2279 2285 2287 2288 2291 2293 2297 2298 2300 2302 2303 2308 2311 2313 2314 2319 2320 2322 2324:2326 2329 2332 2334 2335 2340 2341 2343 2345:2347 2350 2352 2353 2356 2359 2364 2365 2367 2369 2370 2375 2378 2380 2381 2386 2387 2389 2391:2393 2396 2398 2399 2402 2405 2410 2411 2413 2415 2416 2421 2423 2424 2427 2429 2433 2434 2436 2438 2439 2444 2446 2447 2450 2453 2458 2459 2461 2463 2464 2469 2472 2474 2475 2479 2480 2482 2484 2485 2490 2492 2493 2496 2499 2504 2505 2507 2509 2510 2515 2518 2520 2521 2523 2524 2526 2528 2529 2535 2537 2538 2541 2544 2549 2550 2552 2554 2555 2560 2563 2565 2566 2570 2571 2573 2575 2576 2581 2584 2586 2587 2592 2593 2595 2597:2599 2602 2605 2607 2608 2612 2613 2615 2617 2618 2623 2625 2626 2629 2631 2635 2636 2638 2640 2641 2646 2649 2651 2652 2656 2657 2659 2661 2662 2667 2669 2670 2673 2675 2679 2680 2682 2684 2685 2690 2692 2693 2696 2698 2702 2703 2705 2707 2708 2713 2716 2718 2719 2724 2725 2727 2729:2731 2734 2737 2739 2740 2745 2746 2748 2750:2752 2755 2756 2758 2759 2761 2766 2767 2769:2772 2779 2780 2782:2784 2786 2787 2789:2791 2794 2795 2797 2799 2803 2804 2806:2809 2812 2813 2815:2821 2826 2827 2829 2830 2835 2836 2838:2840 2843 2844 2846 2849 2850 2852:2854 2859 2860 2862:2868 2873 2874 2876 2879 2880 2884 2885 2887:2889 2892 2893 2895 2900 2901 2903:2909 2914 2915 2917:2919 2926 2927 2929 2931 2935 2936 2938:2940 2943 2944 2946 2951 2952 2954:2956 2958 2968 2969 2971:2973 2976 2977 2979:2981 2984 2985 2987 2988 2995 2996 2998:3000 3007 3008 3010 3013 3014 3016 3021 3022 3024 3025 3027 3028 3034 3035 3037:3039 3042 3043 3045 3050 3051 3053 3056 3057 3059:3062 3069 3070 3072 3074 3078 3079 3081:3083 3085 3095 3096 3098:3100 3105 3106 3108:3111 3118 3119 3121:3123 3126 3127 3129:3131 3136 3137 3139 3142 3143 3145 3148 3149 3151 3152 3154 3157 3158 3160 3163 3164 3166:3168 3173 3174 3176:3179 3182 3183 3185 3186 3193 3194 3196:3202 3207 3208 3210:3213 3216 3217 3219:3221 3223 3224 3226 3227 3234 3235 3237:3239 3241});
+  Spacefill 0.39;
+  select ({2262 2264 2267 2268 2270 2284 2286 2289 2290 2292 2307 2310 2328 2331 2349 2351 2355 2357 2358 2374 2377 2395 2397 2401 2403 2404 2420 2422 2425 2426 2428 2443 2445 2449 2451 2452 2468 2471 2473 2489 2491 2495 2497 2498 2514 2517 2519 2534 2536 2540 2542 2543 2559 2562 2564 2580 2583 2601 2604 2606 2622 2624 2627 2628 2630 2645 2648 2650 2666 2668 2671 2672 2674 2689 2691 2694 2695 2697 2712 2715 2733 2736 2754 2765 2773 2778 2785 2793 2802 2811 2825 2834 2842 2848 2858 2872 2878 2883 2891 2899 2913 2921 2925 2934 2942 2950 2957 2959 2960 2967 2975 2983 2990 2994 3002 3006 3012 3020 3026 3029 3033 3041 3049 3055 3063 3068 3077 3084 3086 3087 3094 3104 3112 3117 3125 3135 3141 3147 3156 3162 3172 3181 3188 3192 3206 3215 3222 3229 3233 3240 3242 3243});
+  Spacefill 0.37;
+  select ({3251});
+  Spacefill 0.454;
+  select ({2280:2282 2304 2305 2315 2336 2360 2371 2372 2382 2406 2417 2418 2440 2441 2454 2465 2466 2486 2487 2500 2511:2513 2530:2532 2545 2556 2557 2577 2578 2588 2619 2620 2642 2643 2663 2664 2686 2687 2709 2710 2720 2741 2753 2762:2764 2774:2777 2792 2800 2801 2810 2823 2824 2833 2841 2847 2857 2870 2871 2877 2882 2890 2897 2898 2911 2912 2922:2924 2932 2933 2941 2948 2949 2961:2966 2974 2982 2991:2993 3003:3005 3011 3018 3019 3030:3032 3040 3047 3048 3054 3064:3067 3075 3076 3088:3093 3103 3113:3116 3124 3134 3140 3146 3155 3161 3171 3180 3189:3191 3204 3205 3214 3230:3232 3245:3250 3253 3254 3256 3257 3259 3260 3262 3263 3265 3266 3268 3269 3271 3272 3274 3275 3277 3278 3280 3281 3283 3284 3286 3287 3289 3290 3292 3293 3295 3296 3298 3299 3301 3302 3304 3305 3307 3308 3310 3311 3313 3314 3316 3317 3319 3320 3322 3323 3325 3326 3328 3329 3331 3332 3334 3335 3337 3338 3340 3341 3343 3344 3346 3347 3349 3350 3352 3353 3355 3356 3358 3359 3361 3362 3364 3365 3367 3368 3370 3371 3373 3374 3376 3377 3379 3380 3382 3383});
+  Spacefill 0.24;
+  select ({2283 2306 2327 2348 2373 2394 2419 2442 2467 2488 2533 2558 2579 2600 2621 2644 2665 2688 2711 2732});
+  Spacefill 0.416;
+  select BONDS ({0:1135});
+  wireframe 0.15;
+
+  measures delete;
+  select *; set measures nanometers;
+  font measures 15 SansSerif Plain;
+  select measures ({null});
+
+  select ({0:988 1137:2125 2262:3250});
+  color Ribbons opaque amino;
+
+  boundBox off;
+
+  hover "%U";
+
+  frank on;
+  font frank 16 SansSerif Bold;
+
+end function;
+
+function _setFrameState();
+# frame state;
+# modelCount 3;
+# first 1.1;
+# last 1.3;
+  frame RANGE 1.1 1.3;
+  animation DIRECTION +1;
+  animation FPS 10;
+  animation MODE ONCE 0.0 0.0;
+  frame 1.3;
+  animation OFF;
+end function;
+
+function _setPerspectiveState();
+  set perspectiveModel 11;
+  set scaleAngstromsPerInch 0.0;
+  set perspectiveDepth true;
+  set visualRange 5.0;
+  set cameraDepth 3.0;
+  boundbox corners {7.41 6.2599983 3.7700005} {34.93 47.18 50.82} # volume = 52983.875;
+  center {21.17 26.72 27.295};
+  moveto 0.0 { -9 -1000 -9 89.0} 100.0 0.0 0.1 {21.17 26.72 27.295} 27.544636 {0.0 0.0 0.0} 44.39739 44.48715 50.0;;
+  slab 100;depth 0;
+  set spinX 0; set spinY 30; set spinZ 0; set spinFps 30; spin on;
+end function;
+
+function _setSelectionState();
+  select ({2262:3383});
+  set hideNotSelected false;
+end function;
+
+function _setState();
+  initialize;
+  set refreshing false;
+  _setWindowState;
+  _setFileState;
+  _setVariableState;
+  _setModelState;
+  _setFrameState;
+  _setPerspectiveState;
+  _setSelectionState;
+  set refreshing true;
+  set antialiasDisplay false;
+  set antialiasTranslucent true;
+  set antialiasImages true;
+  spin on;
+end function;
+
+_setState;

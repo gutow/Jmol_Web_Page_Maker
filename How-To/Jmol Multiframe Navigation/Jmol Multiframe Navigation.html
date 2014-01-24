@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--/* Allows to open Jmol models on request, in a div
+Available from http://biomodel.uah.es/Jmol/ and http://wiki.jmol.org/ Author: Angel Herráez. Version 2007.04.23
+Modified by Jonathan Gutow Version 2007.07.17
+This template is offered freely for anyone to use or adapt it, according to Creative Commons Attribution-ShareAlike 3.0 License,
+http://creativecommons.org/licenses/by-sa/3.0/
+*/-->
+
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=ISO-8859-1">
+<meta name="generator" content="Jmol, see http://www.jmol.org">
+<meta name="Author" content="J. Gutow">
+<meta name="keywords" content="generated_by_Jmol_Webexport"><title>Navigating a multiframe file</title>
+
+<style type="text/css">
+/* These are important, don't change: */
+html, body { height:100%; overflow:hidden; margin:0; padding:0; }
+.JmolPanels { position:absolute; overflow:hidden;}
+.textPanels { position:absolute; overflow:auto; }
+#JmolPane {left:50%; width: 50%; top:0px; height:100%; }
+#mainPane { left:0px; width:50%; top:0px; height:100%; }
+#JmolDiv {width:100%; height:100%;}
+#Jmol0 {width:100%; height:100%;}
+/* Don't add margin or padding to textPane; if needed, use an inner div with desired style (like 'contents' below) */
+/* These are aesthetic, can be customized: */
+.content { padding:0.5em 1ex; }
+.textPanels { background-color:rgb(102, 255, 255); }
+</style>
+<script src="JmolPopIn.js" type="text/javascript"></script>
+<script type="text/javascript">
+var jmoljarpath = "../../../Applets/Java/Jmol"; // where Jmol.jar is to be found on a server
+var jmoljspath = "../../../Applets/Java/Jmol"; // where Jmol.js is to be found on a server
+var jmollocaljarpath = "../"; // where Jmol.jar is to be found locally
+var jmollocaljspath = "../"; // where Jmol.js is to be found locally
+var jmoljarfile = "JmolApplet.jar"; // "JmolApplet.jar" is everything in one file.
+var dataDir = "."; // where the model AND .spt files are to be found.
+changePathIfLocal();
+</script>
+<script type="text/javascript">
+addJavaScript(jmoljspath, "Jmol.js");
+</script>
+<script type="text/javascript">
+jmolInitialize(jmoljarpath, jmoljarfile); jmolSetDocument(0);
+</script>
+<meta content="J. Gutow" name="author"></head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);" onload="scriptbuttonJmol('Ethane_Default_View.spt')">
+<div id="JmolPane" class="JmolPanels">
+<div id="Jmol0" class="JmolDiv"> <img src="Ethane_Default_View.png" alt="still of jmol image" style="height: 100%; width: 100%;"> </div>
+</div>
+<div id="mainPane" class="textPanels">
+<div style="text-align: center;"></div>
+<div id="mainContent" class="content">
+<div style="text-align: center;"><big><span style="font-weight: bold;">Navigating in a Multiframe File</span></big><br>
+</div>
+The display at right is from the file <a href="../ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>.
+&nbsp;To follow along you can use the applet at right or download
+the
+file and <a href="../Export_to_Web_Tutorial.html#Opening_a_file">open
+it</a> in a copy of the Jmol application. &nbsp;<br>
+<br>
+If you are using the applet at right you can return to this view by
+clicking the button below.
+<table style="text-align: center; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>
+<script type="text/javascript">
+document.write(jmolButton("script Ethane_Default_View.spt", "Ethane Default View")); </script></td>
+</tr>
+</tbody>
+</table>
+The example file has nine (9) different frames in it. &nbsp;The
+first frame is the initial guess geometry that was used to start the
+quantum calculation. &nbsp;Each frame represents an intermediate
+step in the calculation. &nbsp;The last (#9) frame is the final
+optimized geometry found by the program (this is usually the case for
+computational geometry optimizations). &nbsp;The file also contains
+information on energies and molecular orbitals for many of the frames.<br>
+<br>
+There are four primary ways to navigate to particular frames (3
+&amp; 4 only work in the application):<br>
+<ol>
+<li>In the application and the applet use the pop-up menu
+(right mouse button, control-click on a one button mouse &gt; Model
+&gt; <span style="font-style: italic;">select the
+frame you wish to display</span>). &nbsp;You can also use
+choices in the "Animate" option of this pop-up menu.</li>
+<li>Use the command line (see <a href="../Jmol%20Commands%20and%20Scripting/Jmol%20Commands%20and%20Scripting.html">Using
+the Jmol Script Window</a> for how to access). The command is "<span style="font-weight: bold;">frame #.#</span>"(or its synonym, "<span style="font-weight: bold;">model #.#</span>"), where
+the first number is the model number (essentially the file) and the
+frame is the molecular information set within the file. &nbsp;So
+for the example file "<span style="font-weight: bold;">frame
+1.9</span>" will move you to frame 9 (the last frame of this file); &nbsp;"<span style="font-weight: bold;">frame 1.7</span>" will move
+you to the seventh frame; "<span style="font-weight: bold;">frame
+1.1</span>" will move
+you to the first frame; "<span style="font-weight: bold;">frame
+1.0</span>" means display all the frames superimposed on each other. &nbsp;Since
+only one file is loaded the first digit is always one in this example.</li>
+<li>Use the pull-down menus or buttons in the application (to
+try this&nbsp; <a href="../ethane-staggered-3-21G.log">download
+the data file</a> and <a href="../Export_to_Web_Tutorial.html#Opening_a_file">open it</a>
+in the Jmol application). The menu command is (Tools &gt;
+Animate... &gt; Once) to play through to the last frame once. &nbsp;To move
+one frame at a time use the buttons. Use <img style="width: 20px; height: 20px;" alt="Rewind button" src="firstButton.png">, the rewind button, to get to the first
+frame. Use <img style="width: 20px; height: 20px;" alt="Previous button" src="prevButton.png">, the
+previous button, to go back one frame. &nbsp;Use <img style="width: 20px; height: 20px;" alt="next button" src="playButton.png">, the next button, to go forward one
+frame. &nbsp;Use <img style="width: 20px; height: 20px;" alt="last frame button" src="lastButton.png">, the last
+frame button, to go to the end.</li>
+<li>Use the atom set chooser dialog in the application.
+&nbsp;Be warned this dialog needs some updating. &nbsp;Open the
+dialog using the pull-down menu (Tools &gt; AtomSetChooser...).
+&nbsp;You can navigate using the equivalent buttons to those in
+choice 3, but the set at the bottom does not work. &nbsp;You can
+also choose a frame by clicking on it in the scrolling list of frames
+at the top. &nbsp;See figure 1, below.
+<div style="text-align: left; width: 100%;">
+<table style="text-align: left; width: 100%; height: 50%;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td><img style="width: 100%; height: 80%;" alt="atom set chooser dialog" src="AtomSetChooser.png"><br>
+Figure 1: The atom set chooser dialog box. &nbsp;Click <a href="AtomSetChooser.png" target="_blank">here</a>
+to enlarge image.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ol>
+<div id="authordiv" style="text-align: right;">Based
+on template by A. Herráez as modified by J. Gutow
+</div>
+<div id="creationdiv" style="text-align: right;"> <small>Page
+skeleton and <a href="http://www.java.com">JavaScript</a>
+generated by export to web function of (<a href="http://jmol.sourceforge.net">Jmol 11.5.46 2008-06-21
+05:54</a>) on Jul 14, 2008. </small><br>
+</div>
+<div id="logdiv" style="display: none;">
+<pre>Using directory /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/Jmol Commands and Scripting
+adding JmolPopIn.js
+...jmolApplet0
+...adding Ethane_Default_View.png
+...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/ethane-staggered-3-21G.log to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/Jmol Commands and Scripting/ethane-staggered-3-21G.log
+...adding Ethane_Default_View.spt
+</pre>
+</div>
+</div>
+<!--content--></div>
+<!--mainPane-->
+</body></html>

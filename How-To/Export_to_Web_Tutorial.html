@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title>How-To: Easy Jmol Web Pages</title>
+    <meta name="generator" content="Amaya, see http://www.w3.org/Amaya/">
+  </head>
+  <body>
+    <h1 style="text-align: center;">Easy Jmol Web Pages using the Jmol
+      Export to Web Function</h1>
+    <p style="text-align: center;"><em>By Jonathan Gutow, July 2008
+        (updated: January 2013)<br>
+      </em><font color="#ff0000">Jmol versions 14.1.5 or greater, NOW
+        GENERATE JSmol (pure javascript no java necessary) PAGES</font><em><br>
+        To learn more about JSmol capabilities see the <a
+          target="_blank"
+          href="http://wiki.jmol.org/index.php/Jmol_JavaScript_Object">Jmol
+          wiki</a></em><em><img alt="External Website, Opens in New
+          Window"
+src="newwindow.gif"
+          width="16" height="13">. <br>
+      </em></p>
+    <p>The export to web function in Jmol automatically generates some
+      simple web pages that display views you design within the Jmol
+      application. You can edit the pages created using a standard web
+      editor to change the text and add features, such as pictures and
+      tables. These automatically generated pages are also a good
+      starting point for more complicated pages that require some hand
+      coding. There are also some <a href="Alternatives.html">alternative
+
+        packages for generating Jmol based web pages</a> that require
+      additional software or operate from servers. &nbsp;At present the
+      "export to web..." function provides&nbsp;two simple templates:</p>
+    <table style="width: 100%;" border="1">
+      <tbody>
+        <tr>
+          <td style="width: 50%; vertical-align: top;"><strong>Pop-in</strong>:
+            this template allows you to create a page with multiple
+            images of your Jmol views.&nbsp; When a user clicks on one
+            of these pictures, it becomes a live JSmol/Jmol applet that
+            can be rotated, zoomed etc.
+            <p style="text-align: center;"><img style="width: 132px;
+                height: 200px;" alt="Cartoon of Pop-in Page"
+                src="pop_in.png" width="135" height="200"></p>
+            <p style="text-align: center;">Figure 1: Cartoon of the
+              Pop-in style page.</p>
+          </td>
+          <td style="vertical-align: top;"><strong>ScriptButton</strong>:
+            this template displays a single JSmol/Jmol applet on the
+            right side of the browser window.&nbsp; On the left side is
+            a scrolling region with buttons that allow the user to
+            select the view.
+            <p style="text-align: center;"><img alt="Caortoon of Script
+                Button Page" src="script_button.png" width="250"
+                height="201"> </p>
+            <p style="text-align: center;">Figure 2: Cartoon of the
+              Scriptbutton style page.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Possible future enhancements include: 1) addition of optional
+      buttons that do common things to Jmol views, such as spin the
+      molecule or change the background color; 2) a new template for a
+      table of Jmol applets; and 3) other requests as they are made by
+      users.</p>
+    <p>To create pages with either of these formats start Jmol and open
+      a file containing the molecular information you want to view. Jmol
+      reads many file formats including .pdb, .cif, .mol, gaussian and
+      gamess output files. For this tutorial I will use the gamess .log
+      output file from an optimization of the geometry of staggered
+      ethane. If you wish to follow along download the file (you may
+      need to right-click, ctrl-click on a one button mouse, and select
+      "save as.." to prevent your browser from displaying it. You can
+      also copy and paste from the browser into a text document): <a
+        href="ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>.
+      &nbsp;Many of the pages in this tutorial were generated using the
+      Jmol Export to Web function.</p>
+    <big style="font-weight: bold;"><big>Getting Started (Starting Jmol
+        and opening a file):</big></big><br>
+    <a href="#Make_a_Web_Page">Skip to making a web page if you already
+      have Jmol and can load structures into it.</a>
+    <div style="float: right;" align="right">
+      <table style="width: 258px;" border="0">
+        <tbody>
+          <tr>
+            <td><img alt="Initial view on openning Jmol"
+                src="Initial_Jmol_App_View.png" width="256" height="308"></td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">Figure 3: The initial view
+              upon opening Jmol.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ol>
+      <li>If you haven't, <strong>Download Jmol</strong>: Get the
+        latest stable version from the Jmol web site (<a target="_blank"
+          href="http://www.jmol.org">www.jmol.org</a><img alt="External
+          Website, Opens in New Window" src="newwindow.gif" width="16"
+          height="13">). Once there follow the download links. Once
+        downloaded you will have to "unzip" the compressed file.</li>
+      <li><span style="font-weight: bold;">Make sure you have a Java
+          Virtual Machine (JVM) Installed</span>: &nbsp;This was the
+        default on MacOS X and recent Windows XP/Vista systems, but on
+        the newest versions you may need to install it. &nbsp;Most Linux
+        systems require you to install the JVM. &nbsp;To perform an
+        installation follow the instructions for your particular system.
+        &nbsp;The <a href="http://www.java.com" target="_blank">Oracle
+          Java</a><img alt="External Website, Opens in New Window"
+          src="newwindow.gif" width="16" height="13"> system is
+        recommended although <a target="_blank"
+          href="http://openjdk.java.net/">OpenJava</a><img alt="External
+          Website, Opens in New Window"
+src="file:///Users/gutow/Documents/Web%20Pages/Jmol_Web_Page_Maker/How-To/newwindow.gif"
+          width="16" height="13"> also works.</li>
+      <li><strong>Launching Jmol</strong>: On your computer find the
+        file, Jmol.jar.&nbsp;</li>
+      <ul>
+        <li>On <span style="font-weight: bold;">MacOS X</span> simply
+          double click the Jmol.jar file to launch the program.</li>
+      </ul>
+      <ul>
+        <li>On <span style="font-weight: bold;">Linux</span>
+          double-clicking Jmol.jar may default to uncompressing the .jar
+          file. In that case you will need to launch it from a command
+          line ("java -jar Jmol.jar") or use your GUI "Open with ..."
+          functionality which is usually available by right clicking on
+          the icon. &nbsp;</li>
+        <li>On <span style="font-weight: bold;">Windows</span> the file
+          may be difficult to identify, because by default the
+          extensions are hidden and there are a number of files called
+          Jmol.XXX, with different extensions. In XP to show the
+          extensions go to the Tools menu and select "Folder
+          Options...". &nbsp;In the dialog that opens select the "View"
+          tab and scroll down to "Hide Extensions for Known File Types".
+          &nbsp;Uncheck this option. &nbsp;Click "Apply" and then "OK".
+          &nbsp;Double clicking on Jmol.jar may work, but not always (it
+          depends on exactly which version of Windows). You may be able
+          to get it to work using <a target="_blank"
+            href="http://www.syncedit.com/software/javalauncher/">javalauncher</a><img
+            alt="External Website, Opens in New Window"
+            src="newwindow.gif" width="16" height="13">. Otherwise right
+          click on the icon and use the "Open with.." menu item. Select
+          "Java Platform..." and click "OK". If this does not work and
+          you do have a java virtual machine installed, open the command
+          prompt; navigate to the proper directory and type "java -jar
+          jmol.jar".&nbsp;</li>
+      </ul>
+      <ul>
+        <li>Once the program launches you will get a window that looks
+          like Figure 3. </li>
+      </ul>
+      <li><strong><a name="Opening_a_file"></a>Opening a file</strong>:
+        In the file menu select "Open..." Use the open file dialog to
+        navigate to the directory your file is stored in. Select the
+        file and click "Open". If the file is of a type that Jmol can
+        read a picture of a molecule should appear.</li>
+    </ol>
+    <h2><a name="Make_a_Web_Page"></a>Make a Web Page </h2>
+    <ol>
+      <li><strong>Familiarize yourself with Jmol</strong>. If you
+        already know how to make Jmol display measurements, orbitals,
+        change atom size and things like that skip to step 2. Otherwise
+        try these links on getting Jmol to display the molecule the way
+        you want ( <img alt="External Website, Opens in New Window"
+          src="newwindow.gif" width="16" height="13"> indicates an
+        external web site that will open in a new window):&nbsp;<a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#zoom">Zoom</a>
+        | <a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#rotate_">Rotate</a>
+        | <a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#spin_">Set
+
+          Spinning</a> | <a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#atom_size">Change
+Atom
+
+          Size</a> | <a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#bond_size">Change
+Bond
+
+          Size</a> | <a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#measure">Make
+and
+Show
+
+          Measurements</a> | <a
+href="General%20Jmol%20View%20Manipulation/General%20Jmol%20View%20Manipulation.html#cartoon">Make
+Cartoon
+
+          Views of Biomolecules</a> | <a
+          href="How%20to%20Display%20Orbitals/How%20to%20Display%20Orbitals.html">Displaying
+
+          Orbitals</a> | <a
+href="Jmol%20Commands%20and%20Scripting/Jmol%20Commands%20and%20Scripting.html">Using
+Commands
+
+          in the Script Window</a> | <a
+href="Jmol%20Multiframe%20Navigation/Jmol%20Multiframe%20Navigation.html">Navigating
+within
+
+          a Multiframe (multi-image) File</a> | <a
+          href="Adding%20Text%20and%20Labels/Adding%20Text%20and%20Labels.html">Adding
+Your
+
+          Own Text</a> | <a
+          href="http://chemapps.stolaf.edu/jmol/docs/examples-11/lcao.htm"
+          target="_blank">LCAO Cartoons</a><img alt="External Website,
+          Opens in New Window" src="newwindow.gif" width="16"
+          height="13"> | <a
+          href="http://chemapps.stolaf.edu/jmol/docs/examples-11/sym.htm"
+          target="_blank">Displaying Crystallographic Information</a><img
+          alt="External Website, Opens in New Window"
+          src="newwindow.gif" width="16" height="13"> | <a
+          href="http://chemapps.stolaf.edu/jmol/" target="_blank">Bob
+          Hanson's Scripting Documentation</a><img alt="External
+          Website, Opens in New Window" src="newwindow.gif" width="16"
+          height="13"> | <a href="http://wiki.jmol.org" target="_blank">Much
+
+          more about Jmol and its capabilities (the Jmol Wiki)</a><img
+          alt="External Website, Opens in New Window"
+          src="newwindow.gif" width="16" height="13">.</li>
+      <li><strong>Make web pages using the Jmol Web Page Maker dialog</strong>.
+        <div style="float: right;" align="right">
+          <table style="width: 258px;" border="0">
+            <tbody>
+              <tr>
+                <td><img alt="PopIn dialog" src="PopIn%20Dialog.png"
+                    width="256" height="300"> </td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Figure 4: The Pop-In tab
+                  from the Export to Web (Jmol Web Page Maker) dialog.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li><em>General setup that is common to all templates</em>.
+            <ol>
+              <li>Open the Jmol Web Page Maker dialog by clicking on the
+                "Export to Web Page..." icon <img style="width: 20px;
+                  height: 20px;" alt="export to web page icon"
+                  src="towebButton.png" align="middle"> or by selecting
+                "Export to Web Page..." within the "Export" submenu of
+                the "File" menu. A dialog box should appear. </li>
+              <li> Select one of the template tabs by clicking on it (I
+                will use the Pop-in template as an example). See Figure
+                4. </li>
+              <li>The fields on the left side of the dialog contain
+                general setup information that is used to make the Jmol
+                Applet work on your server (<a
+                  href="Installing_Applet.html">instructions for
+                  installing the applet on your server</a>). &nbsp;The
+                "Help/Instructions" button provides a brief version of
+                the information in these tutorials.</li>
+              <li><a name="Server_Path_to_Jmol"></a>In the top text
+                field set the relative path (directions to the
+                directory) on the SERVER&nbsp; to JSmol from the
+                directory that will contain your web page. &nbsp;Use a
+                "../" for each level you move up in the directory
+                structure from where your page will be stored followed
+                by names for each level down.&nbsp;<span
+                  style="font-style: italic;">Example</span>: JSmol
+                directory (called 'jsmol') is in the directory
+                "/www/applets" on the server, and you will be creating
+                the directory "/www/yourname/thispage" to hold the HTML
+                files and other data files. The correct path to the Jmol
+                applet is then "../../applets/jsmol" (up two to the www
+                directory and then down to the jsmol directory).</li>
+              <li><a name="Testing_Locally"></a>In the second text box
+                set the relative path on your computer to the Jmol
+                applet. &nbsp;This allows you to test the pages without
+                uploading them to the server (the Mozilla browsers, FireFox
+                &amp; SeaMonkey, are recommended for local testing
+                because of security issues).&nbsp; The necessary
+                javascript and Java files must be in a folder below the
+                .html page.&nbsp; Jmol will set this up properly for you
+                if you just put a "." in this field. To save space on
+                your server the 'jsmol' directory created within the
+                folder (directory) for the page should be deleted before
+                uploading the directory to your server. Alternative
+                locations of the jsmol directory no longer work for
+                local testing, due to increased security restrictions.<br>
+              </li>
+              <ul>
+              </ul>
+              <li>Put in your name as the author.</li>
+              <li>Pick a descriptive title for the page.</li>
+            </ol>
+            <ol>
+            </ol>
+          </li>
+          <li><a href="Make%20Pop-in%20Page/Make%20Pop-in%20Page.html">Make
+
+              a web page using the Pop-in template</a>.</li>
+          <li><a
+href="Make%20a%20ScriptButton%20Page/Make%20a%20ScriptButton%20Page.html">Make
+a
+
+              web page using the Scriptbutton template</a>.</li>
+        </ul>
+      </li>
+    </ol>
+    <hr style="width: 100%; height: 2px;">
+    <div style="text-align: right;"><small><small>Last Update: January
+          13, 2014<br>
+          Expires: --<br>
+          By J. Gutow</small></small></div>
+  </body>
+</html>

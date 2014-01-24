@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Jmol_Web_Page_Maker_docs</title>
+  <meta content="J. Gutow" name="author">
+  <meta content="Documentation for Jmol_Web_Page_Maker"
+ name="description">
+</head>
+<body>
+<div style="text-align: center;"><span style="font-weight: bold;">Documentation
+for Jmol_Web_Page_Maker</span><br>
+</div>
+<a name="Table_of_Contents"></a><a href="#Introduction">I. Introduction</a><br>
+II. <a href="#Launching_the_Program">Launching the Program</a> (Only
+applies to version 1.0. Version 2.0 and greater operate inside of Jmol)<br>
+III. Using to Create Pages:<br>
+<div style="margin-left: 40px;">A. <a href="#Resizable">where the user
+can click buttons to change the view in the Jmol applet.</a>&nbsp;
+Buttons and explanatory text scroll next to the applet and the applet
+resizes when the window size is changed. (not available in version 1.0)<br>
+B. <a href="#pop-in">where the initial page displays any number of
+static images that the user can convert to a live Jmol display.</a>
+(not available in version 1.0)<br>
+C. <a href="#Using_to_Create_Pages:_where_the_user">where the user can
+choose which orbitals to display on a molecule or atom.</a><br>
+D. where the user has a choice of molecules to display using lists or
+pop-up menus.<br>
+</div>
+<a href="Jmol_Web_Page_Maker_Extending.shtml">IV. Extending the Program</a><br>
+V. <a href="http://www.gnu.org/licenses/">License</a><br>
+<br>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"><a
+ name="Introduction"></a>Introduction </span>[<a
+ href="#Table_of_Contents">Back to Table of Contents</a>]<br>
+<span style="font-weight: bold;">Introduction<br>
+</span>Jmol_Web_Page_Maker
+started as a Java application that provided a
+GUI (graphical user interface) for choosing molecule and surface files
+from which to create skeleton web
+pages containing the Jmol applet and many simple user interface items
+such as radio buttons and popup menus.&nbsp; It has now been folded
+into the
+application version of Jmol as a tabbed dialog accessible in the menus:
+File -&gt; Export -&gt; Export to Web Page(s)... This allows the user
+to set up the molecular view as they wish in Jmol and then have the
+export function generate the skeletal web page and all necessary
+files.&nbsp; It does not provide a
+WYSIWYG (what you see is what you get) web editor.&nbsp; These skeleton
+pages can
+then be editted in your favorite web page editor, as long as you do not
+damage the javascript put in to support Jmol.&nbsp; AS OF AUGUST 7,
+2007
+THIS FUNCTIONALITY HAS NOT BEEN FOLDED INTO THE MAIN RELEASE OF
+Jmol.&nbsp;
+UNTIL IT IS I WILL MAINTAIN A DOWNLOAD OF A RECENT VERSION OF Jmol WITH
+THIS FUNCTIONALITY AT THIS SITE AND CALL IT Jmol_XX.X.X_JWM.<br>
+<br>
+The program is
+designed to have additional web page format choices added by adding a
+new class that contains an appropriate web page writer.&nbsp;&nbsp; If
+you are interested in adding a new page writer, please see the
+instructions for extending the program.<br>
+<br>
+I am distributing this program under the <a
+ href="http://www.gnu.org/licenses/">GNU general public
+license</a>.&nbsp; If people help and the program becomes more polished
+it
+might make a useful plugin for the Jmol application itself.<br>
+<br>
+<span style="font-weight: bold;">What happened to Orbtials_to_Web
+and MacMolPltGridtoCube?</span><br>
+Jmol_Web_Page_Maker replaces my previous Java and perl applications for
+creating pages with orbitals.&nbsp; These older applications and the
+java tool for converting MacMolPlt grid files to Gaussian .cube files
+are available <a href="../Orbitals/HowTo/Jmol_to_web_java.html">here</a>.<br>
+<br>
+Intro last Update: 8/7/07 by Jonathan Gutow&nbsp; <span
+ style="font-weight: bold;"></span>[<a href="#Table_of_Contents">Back
+to Table of Contents</a>]
+<hr style="width: 100%; height: 2px;"><a name="Launching_the_Program"></a>Launching
+the Program (Only applies to version 1.0) (<a href="#Launch_MacOS">MacOS</a>,
+<a href="#Launch_LINUX">LINUX</a>,
+<a href="#Launch_WINDOWS">WINDOWS</a>)&nbsp; <span
+ style="font-weight: bold;"></span>[<a href="#Table_of_Contents">Back
+to Table of Contents</a>]<br>
+<br>
+<a name="Launch_MacOS"></a>MacOS: Locate the file
+Jmol_Web_Page_Maker.jar and double click on it.&nbsp; This will start
+the java virtual machine and launch the Jmol_Web_Page_Maker java
+application contained in the .jar file.<br>
+<br>
+<a name="Launch_LINUX"></a>LINUX:&nbsp; You must have a java virtual
+machine installed (preferably 1.4.1 or above, JSE 5.0 or greater
+recommended).&nbsp; You can launch it from the command line or from
+within your graphical environment.<br>
+<ul>
+  <li>From the command line: navigate to the directory containing the
+file Jmol_Web_Page_Maker.jar.&nbsp; Type: java -jar
+Jmol_Web_Page_Maker.jar &lt;return&gt; on the command line.&nbsp; This
+should launch the java application.</li>
+  <li>From the graphical user interface double click (or right click
+and select open...) on the file Jmol_Web_Page_Maker.jar.&nbsp; If you
+have already associated the command "java -jar" with .jar files the
+java application should launch.&nbsp; If not you may be prompted for
+the command line to open the file.&nbsp; Type in "java -jar" as the
+launch command. This seems to work with gnome, I'm not sure about kde.</li>
+</ul>
+<a name="Launch_WINDOWS"></a>WINDOWS: Locate the file
+Jmol_Web_Page_Maker.bat and double click on it.&nbsp; This should
+launch the java virtual machine and launch the application.&nbsp; If
+this doesn't work you will have to find out what the appropriate
+command for launching applications packaged as java .jar files is on
+your machine.<br>
+<br>
+Launching last Update: 10/2/06 by Jonathan Gutow&nbsp; <span
+ style="font-weight: bold;"></span>[<a href="#Table_of_Contents">Back
+to Table of Contents</a>]
+<hr style="width: 100%; height: 2px;"><a name="Resizable"></a>Using to
+Create Pages:&nbsp; where the user can click buttons to change the view
+in the Jmol
+applet.&nbsp; Buttons and explanatory text scroll next to the applet
+and the
+applet resizes when the window size is changed. (not in 1.0) <span
+ style="font-weight: bold;"></span>[<a
+ href="Jmol_Web_Page_Maker_docs.shtml#Table_of_Contents">Back
+to Table of Contents</a>]<br>
+<br>
+<span style="font-style: italic;">Description</span> - This tab is
+designed to produce a web page template (no explanatory text) that
+displays a resizable Jmol with a scrolling pane containing text and
+buttons next to it.&nbsp; The buttons can change what is displayed in
+the Jmol applet.&nbsp; What they do can be defined by setting up Jmol
+with the view you want the user to see. An example picture of
+such a page is shown below:<br>
+<img style="border: 1px solid ; width: 250px; height: 268px;"
+ alt="picture of a Resizable web page" src="Resizable_high_res.png"><br>
+<br>
+<span style="font-style: italic;">Instructions </span><br>
+1) Set the relative path to the Jmol applet on you web site from where
+you will put the folder (directory) containing the files created by
+this program.&nbsp; Each "../" means step up one directory level.&nbsp;
+Do not forget to account for the fact that the page produced by this
+program is inside a folder (directory) that you will be adding to your
+web site.&nbsp; Example: Jmol applet is in directory
+/www/applets/java/jmol and your web site is in the directory
+/www/yourname.&nbsp; You will be adding one more level for this page
+(e.g. /www/yourname/thispage).&nbsp; The correct path to the Jmol
+applet is ../../applets/java/jmol.<br>
+2) Set the percentage of the window width that you want Jmol to occupy.<br>
+3) Open the first file you want to appear in your page using the
+File..Open.. menu in the Jmol viewer.<br>
+4) Zoom, rotate, select, change colors, add orbitals, set the molecule
+spinning or what ever you want to do.<br>
+5) Click on the "Add Present Jmol State as Instance" button.<br>
+6) Repeat for as many different displays as you wish. A button will be
+added to the web page that will create each display when the user
+clicks on them.&nbsp; You do not need to load a new file each time if
+you are just modifying the way the previous one is displayed.<br>
+7) When done click on "Save .html as..".&nbsp; Provide a name without
+an extension.&nbsp; This will be used for the directory in which all
+the necessary files will be created.&nbsp; The .html file will be in
+this directory, have the same name, but with the extension .html.<br>
+8) Open the .html file in your favorite web editor and add you
+explanatory text and anything else you wish.&nbsp; As long as you do
+not alter the inside of the tables where Jmol will be displayed you
+should be able to change the page without disrupting the JavaScript
+that controls the behavior of Jmol.<br>
+<br>
+Resizable last Update: 8/7/07 by Jonathan Gutow <span
+ style="font-weight: bold;"></span>[<a
+ href="Jmol_Web_Page_Maker_docs.shtml#Table_of_Contents">Back
+to Table of Contents</a>]
+<hr style="width: 100%; height: 2px;"><a name="pop-in"></a>Using to
+Create Pages: where the initial page displays any number of static
+images that the user can convert to a live Jmol display. (not in 1.0) <span
+ style="font-weight: bold;"></span>[<a
+ href="Jmol_Web_Page_Maker_docs.shtml#Table_of_Contents">Back
+to Table of Contents</a>]<br>
+<br>
+<span style="font-style: italic;">Description</span> - This tab is
+designed to produce a web page template (no explanatory text) that
+displays images of Jmol graphics, each of which can be converted to a
+live Jmol display by the user.&nbsp; This makes initial loading of the
+page faster.&nbsp; The image and initial Jmol setup for each occurence
+can be chosen by setting up the Jmol viewer the way you wish.&nbsp; You
+add the text later in your favorite web editor. An example picture of
+such a page is shown below:<br>
+<img style="border: 1px solid ; width: 250px; height: 268px;"
+ alt="picture of a pop in web page" src="pop_in_high_res.png"><br>
+<br>
+<span style="font-style: italic;">Instructions </span><br>
+1) Set the relative path to the Jmol applet on you web site from where
+you will put the folder (directory) containing the files created by
+this program.&nbsp; Each "../" means step up one directory level.&nbsp;
+Do not forget to account for the fact that the page produced by this
+program is inside a folder (directory) that you will be adding to your
+web site.&nbsp; Example: Jmol applet is in directory
+/www/applets/java/jmol and your web site is in the directory
+/www/yourname.&nbsp; You will be adding one more level for this page
+(e.g. /www/yourname/thispage).&nbsp; The correct path to the Jmol
+applet is ../../applets/java/jmol.<br>
+2) Open the first file you want to appear in your page using the
+File..Open.. menu in the Jmol viewer.<br>
+3) Zoom, rotate, select, change colors, add orbitals, set the molecule
+spinning or what ever you want to do.<br>
+4) Set the size you want this displayed by adjusting the Pixels per
+side of applet.<br>
+5) Click on the "Add Present Jmol State as Instance" button.<br>
+6) Repeat for as many different displays as you wish.&nbsp; Because of
+the memory constraints of web browsers, it is probably best to limit
+yourself to less than 6 different occurences of Jmol in one web
+page.&nbsp; If they are very small you can do more.<br>
+7) When done click on "Save .html as..".&nbsp; Provide a name without
+an extension.&nbsp; This will be used for the directory in which all
+the necessary files will be created.&nbsp; The .html file will be in
+this directory, have the same name, but with the extension .html.<br>
+8) Open the .html file in your favorite web editor and add you
+explanatory text and anything else you wish.&nbsp; As long as you do
+not alter the inside of the tables where Jmol will be displayed you
+should be able to change the page without disrupting the JavaScript
+that controls the behavior of Jmol.<br>
+<br>
+Pop-in last update: 8/7/07 by Jonathan Gutow&nbsp; <span
+ style="font-weight: bold;"></span>[<a
+ href="Jmol_Web_Page_Maker_docs.shtml#Table_of_Contents">Back
+to Table of Contents</a>]
+<hr style="width: 100%; height: 2px;"><a
+ name="Using_to_Create_Pages:_where_the_user"></a>Using to Create
+Pages: where the user can choose which orbitals to display on a
+molecule or atom.&nbsp; This will give you pages that look like <a
+ href="http://www.uwosh.edu/faculty_staff/gutow/Orbitals/Cl/Cl_AOs.html">Dr.
+G's atomic orbital viewer</a>.&nbsp; <span style="font-weight: bold;"></span>[<a
+ href="#Table_of_Contents">Back to Table of Contents</a>]
+<ol>
+  <li>Select the tab (panel) for orbitals.&nbsp; You should see a panel
+that looks like:<img style="width: 371px; height: 234px;"
+ alt="Orbitals Panel" src="orbitals_pane.gif" align="right"><br>
+  </li>
+  <li>Fill in the proper <a href="#Relative_Paths">relative path</a>
+to the Jmol applet on your server.&nbsp; (<a href="#Relative_Paths">See
+relative paths in the appendix</a>)<br>
+  </li>
+  <li>Click on the "Select Coordinate File..." button and select the
+file that contains the coordinates for the atom(s) in your
+molecule.&nbsp; It must use the same coordinates as are used to specify
+the orbital files.</li>
+  <li>Select the rendering mode in the "Rendering Mode" popup. The
+choices are:<br>
+  </li>
+  <ol>
+    <li>Small atom dot will use dots of about 0.20 of the vander Waals
+radius to represent the atom locations.&nbsp; This is most appropriate
+for displaying orbitals on a single atom.</li>
+    <li>Wireframe will use a wireframe representation of the
+molecule.&nbsp; This is most appropriate for displaying orbitals on
+molecules.</li>
+  </ol>
+  <li>Use the page format menu to select the maximum number of separate
+orbitals that may be selected for simultaneous display.&nbsp; The
+largest possible maximum is up to four at once (the user can choose
+fewer).</li>
+  <li>Use the "Add File(s)..." button in the Orbital Files section to
+select the files that contain the orbitals you wish to have available
+for display.&nbsp; At present this is only verified to work with
+Gaussian .cube format files, however it should work with the Jmol .jvxl
+files as well.&nbsp; The files will be arranged in the popup menus in
+the order they are listed.&nbsp; You may drag them to reorder.&nbsp; If
+you mistakenly open files you can delete them from the list by
+selecting them and clicking on the "Delete Selected" button.&nbsp; Two
+suggestions:</li>
+  <ol>
+    <li>Use descriptive names for the part of the filename preceding
+the extension.&nbsp; This will be used as what appears in the popup
+menu.</li>
+    <li>Jmol_Web_Page_Maker deletes all path information.&nbsp; It is
+assumed that the web page it is creating and all the molecule
+information files will be stored in the same directory.</li>
+  </ol>
+  <li>Click the "Save .html as..." button to save the .html file which
+you can edit in a web editor to add descriptive text.&nbsp; Save the
+page in the same directory as the molecule and orbital files.</li>
+  <li>Edit your page in your favorite web editor.&nbsp; It should be
+pretty hard to damage the java script that controls Jmol as it is
+contained in parts of the table that you cannot easily edit.<br>
+  </li>
+</ol>
+Orbitals Pages Last Update: 10/3/06 by J. Gutow&nbsp; <span
+ style="font-weight: bold;"></span>[<a href="#Table_of_Contents">Back
+to Table of Contents</a>]
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;">Appendix&nbsp;
+</span><span style="font-weight: bold;"></span>[<a
+ href="#Table_of_Contents">Back to Table of Contents</a>]
+<ul>
+  <li><span style="font-weight: bold;"><a name="Relative_Paths"></a>Relative
+Paths</span>:</li>
+</ul>
+<span style="font-weight: bold;"></span>[<a href="#Table_of_Contents">Back
+to Table of Contents</a>]
+</body>
+</html>

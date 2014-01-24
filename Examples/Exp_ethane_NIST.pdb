@@ -1,0 +1,13 @@
+COMPND    ethane
+AUTHOR    Created by Jonathan Gutow, Univ. Wisc. Oshkosh
+AUTHOR   gutow@uwosh.edu
+AUTHOR    Date revised: November 23, 2008
+AUTHOR	  based on experimental coordinates in NIST database
+HETATM    1  C           1      0.0000 	0.0000 	0.7680  1.00  0.00 
+HETATM    2  C           1      0.0000 	0.0000 -0.7680  1.00  0.00 
+HETATM    3  H           1     -1.0192 	0.0000 	1.1573  1.00  0.00 
+HETATM    4  H           1      0.5096 	0.8826 	1.1573  1.00  0.00 
+HETATM    5  H           1      0.5096 -0.8826  1.1573  1.00  0.00 
+HETATM    6  H           1      1.0192 	0.0000 -1.1573  1.00  0.00 
+HETATM    7  H           1     -0.5096 -0.8826 -1.1573  1.00  0.00 
+HETATM    8  H           1     -0.5096 0.8826  -1.1573  1.00  0.00 

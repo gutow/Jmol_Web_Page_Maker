@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Jmol_Web_Page_Maker_Extending</title>
+  <meta content="J. Gutow" name="author">
+  <meta
+ content="Brief intro to extending the capabilities of the Jmol_Web_Page_Maker Java Application"
+ name="description">
+</head>
+<body>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><!--#include virtual ="Jmol_Web_Page_Maker_Header.html"--><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><!--#include virtual = "Jmol Web Page Maker Programming.html"-->
+      <div style="text-align: right;"><small><small>Last Update: 7/18/06</small></small><span
+ style="font-weight: bold;"></span><br style="font-weight: bold;">
+      <span style="font-weight: bold;"></span></div>
+      <span style="font-weight: bold;"></span> </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

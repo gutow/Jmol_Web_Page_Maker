@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--/* Allows to open Jmol models on request, in a div
+Available from http://biomodel.uah.es/Jmol/ and http://wiki.jmol.org/ Author: Angel Herráez. Version 2007.04.23
+Modified by Jonathan Gutow Version 2007.07.17
+This template is offered freely for anyone to use or adapt it, according to Creative Commons Attribution-ShareAlike 3.0 License,
+http://creativecommons.org/licenses/by-sa/3.0/
+*/-->
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="Jmol, see http://www.jmol.org">
+<meta name="Author" content="J. Gutow">
+<meta name="keywords" content="generated_by_Jmol_Webexport"><title>General Jmol View Manipulation</title>
+
+<style type="text/css">
+.JmolDiv { padding:0.3em 0.5ex; font-size:0.9em;}
+.floatRightDiv { padding:0.3em 0.5ex; font-size:0.9em; float:right;}
+.floatLeftDiv { padding:0.3em 0.5ex; font-size:0.9em; float:left;}
+</style>
+<script src="JmolPopIn.js" type="text/javascript"></script>
+<script type="text/javascript">
+var jmoljarpath = "../../../Applets/Java/Jmol"; // where Jmol.jar is to be found on a server
+var jmoljspath = "../../../Applets/Java/Jmol"; // where Jmol.js is to be found on a server
+var jmollocaljarpath = "../"; // where Jmol.jar is to be found locally
+var jmollocaljspath = "../"; // where Jmol.js is to be found locally
+var jmoljarfile = "JmolApplet.jar"; // "JmolApplet.jar" is everything in one file
+var dataDir = "."; // where the model AND .spt files are to be found.
+changePathIfLocal();
+</script>
+<script type="text/javascript">
+addJavaScript(jmoljspath, "Jmol.js");
+</script>
+<script type="text/javascript">
+jmolInitialize(jmoljarpath, jmoljarfile);
+jmolSetDocument(false);
+</script></head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);" link="#000099" alink="#000099" vlink="#990099">
+<div id="introdiv" style="text-align: left;">
+<div id="titlediv" style="text-align: center;">
+<h2>Common Ways to Manipulate the View in Jmol </h2>
+</div>
+Below are descriptions of how to do some common things with the Jmol
+view: <a href="#zoom">Zoom</a> | <a href="#rotate_">Rotate</a> | <a href="#spin_">Set
+Spinning</a> | <a href="#atom_size">Change Atom Size</a>
+| <a href="#bond_size">Change Bond Size</a> | <a href="#measure">Make
+and
+Show Measurements</a> | <a href="#cartoon">Make
+Cartoon Views of Biomolecules</a>.
+</div>
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: bold;">Zoom and
+Rotate</span></p>
+<div id="divEthane_for_zoom">
+<div id="tableEthane_for_zoom" class="floatRightDiv">
+<table style="width: 300px; text-align: left;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; width: 300px; height: 300px;">
+<div id="Jmol0" class="JmolDiv" style="width: 300px; height: 300px; background-image: url(Ethane_for_zoom.png);">
+<script type="text/javascript">
+putJmolDiv(0, "Ethane_for_zoom.spt", "Ethane_for_zoom.png", 300, 300); </script></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Figure 1:
+View of staggered ethane ( <a href="../ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>)
+to practice zooming and rotating. &nbsp;To make live click on the
+link in the image. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="textEthane_for_zoom">
+<p><span style="font-weight: bold;">To <a name="zoom"></a>zoom</span> the image in Jmol
+put the mouse cursor over the Jmol image then hold down the shift key
+and the left mouse button while dragging down to zoom in or up to zoom
+out. &nbsp;For some mice the scroll wheel also works.
+&nbsp;Fixed zoom levels are also accessible in the pull-down menus
+of the application (Display &gt; Zoom &gt; XXX%) and the pop-up
+menu in both the application and the web applet (Right mouse button,
+control-click on one button mice, &gt; Zoom &gt; XXX%).
+&nbsp;You can try this in an open Jmol application or by clicking
+the link in figure 1 to convert it to a live Jmol display.</p>
+<p><span style="font-weight: bold;">To <a name="rotate_"></a>rotate</span> the image in
+Jmol put the mouse cursor over the Jmol image then hold down the left
+mouse button while dragging the cursor around. &nbsp;You can try
+this in an open Jmol application or by clicking the link in figure 1 to
+convert it to a live Jmol display.</p>
+<ul>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: bold;">Spinning</span></p>
+<div id="divEthane_for_spin">
+<div id="tableEthane_for_spin" class="floatLeftDiv">
+<table style="text-align: left; width: 300px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; width: 300px; height: 300px;">
+<div id="Jmol1" class="JmolDiv" style="width: 300px; height: 300px; background-image: url(Ethane_for_spin.png);">
+<script type="text/javascript">
+putJmolDiv(1, "Ethane_for_spin.spt", "Ethane_for_spin.png", 300, 300); </script></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Figure 1:
+View of staggered ethane ( <a href="../ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>)
+to practice setting up spinning. &nbsp;To make live click on the
+link in the image. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style="font-weight: bold;">To start</span><a name="spin_"></a><span style="font-weight: bold;">spinning</span>
+the molecule
+using the default spin settings use the pop-up menu in both the
+application and the applet (Right mouse button, control-click on one
+button mice, &gt; Spin &gt; On).&nbsp;You can try this in
+an open Jmol application or by clicking the link in figure 2 to convert
+it to a live Jmol display.</p>
+<p><span style="font-weight: bold;">To</span>
+<span style="font-weight: bold;">stop
+the spinning</span> of the molecule use the pop-up menu
+again&nbsp;(Right mouse button, control-click on one button mice,
+&gt; Spin &gt; Off).&nbsp;You can try this in an open Jmol
+application or by clicking the link in figure 2 to convert it to a live
+Jmol display.</p>
+<span style="font-weight: bold;">To have</span>
+<span style="font-weight: bold;">spinning
+about axes other than Y</span> select the rate (degrees per step)
+for rotation about the X or Z axis. &nbsp;Use the pop-up menu (Right
+mouse button &gt; Spin &gt; Set X (Y or Z) Rate &gt; XX).
+&nbsp;The default Y rate is 30 and 0 for X and Z rates.
+&nbsp;The axes are screen axes: &nbsp;Y is up-down, X is
+left-right, Z is in-out of the screen. You can try this in an open Jmol
+application or by clicking the link in figure 2 to convert it to a live
+Jmol display.
+<ul>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div style="text-align: center;">
+<p><span style="font-weight: bold;">Atom and
+Bond Size</span></p>
+</div>
+<div id="divEthane_for_Atom_Size_and_Bond_Size">
+<div id="tableEthane_for_Atom_Size_and_Bond_Size" class="floatRightDiv">
+<table style="text-align: left; width: 300px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; width: 300px; height: 300px;">
+<div id="Jmol2" class="JmolDiv" style="width: 300px; height: 300px; background-image: url(Ethane_for_Atom_Size_and_Bond_Size.png);">
+<script type="text/javascript">
+putJmolDiv(2, "Ethane_for_Atom_Size_and_Bond_Size.spt", "Ethane_for_Atom_Size_and_Bond_Size.png", 300, 300); </script></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Figure
+3:&nbsp;View of staggered ethane ( <a href="../ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>)
+to practice changing atom and bond size. &nbsp;To make live click
+on the
+link in the image. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="textEthane_for_Atom_Size_and_Bond_Size">
+<p><span style="font-weight: bold;">To change
+the <a name="atom_size"></a>atom size</span>
+use the pull-down menus of the application or the pop-up menu in the
+application and the applet. &nbsp;Fixed percentages of the van der
+Waals radius are available. &nbsp;Pull-down menu (Display &gt;
+Atom &gt; XXX%). &nbsp;Pop-up menu (Right mouse button, control
+click on one button mice, &gt; Style &gt; Atoms &gt; XXX
+%).&nbsp;You can try this in an open Jmol
+application or by clicking the link in figure 3 to convert it to a live
+Jmol display.</p>
+<p><span style="font-weight: bold;">To change
+the <a name="bond_size"></a>bond size</span>
+use the pull-down menus of the application or the pop-up menu in the
+application and the applet. &nbsp;Pull-down menu (Display &gt;
+Bond &gt; XXX). Pop-up menu (Right mouse button &gt; Style
+&gt; Bonds &gt; XXX). &nbsp;You can also quickly select
+some common combinations of atom size and bond from the pop-up menu
+(Right mouse button &gt; Style &gt; Scheme &gt; XXX).
+&nbsp;The options are: CPK spacefill; Ball and Stick; Sticks; Wireframe.
+&nbsp;Wireframe is also available in the pull-down display menu in
+the Bond submenu.&nbsp;You can try this in an open Jmol
+application or by clicking the link in figure 3 to convert it to a live
+Jmol display.
+</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">Making
+and Displaying Measurements</p>
+<div id="divEthane_for_measurements">
+<div id="tableEthane_for_measurements" class="floatLeftDiv">
+<table style="text-align: left; width: 300px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; width: 300px; height: 300px;">
+<div id="Jmol3" class="JmolDiv" style="width: 300px; height: 300px; background-image: url(Ethane_for_measurements.png);">
+<script type="text/javascript">
+putJmolDiv(3, "Ethane_for_measurements.spt", "Ethane_for_measurements.png", 300, 300); </script></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"> Figure
+4:&nbsp; View of staggered ethane ( <a href="../ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>)
+to practice making measurements on. &nbsp;To make live click
+on the
+link in the image. &nbsp;C-H bond lengths 0.108 nm, H&#8211;C&#8211;H angle
+108.1 degrees, H&#8211;C&#8211;C&#8211;H dihedral angle 60.0 degrees.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="textEthane_for_measurements">
+<p><span style="font-weight: bold;">To <a name="measure"></a>measure bond lengths</span>
+double click on the first atom. &nbsp;The cursor will convert to a
+"+". &nbsp;Move the cursor to the second atom. &nbsp;Double
+click on the second atom. &nbsp;The distance between the atoms will
+be shown. &nbsp;Using the pop-up menu you can choose between units
+of nm, angstroms and pm (Right mouse button, control-click on one button
+mice &gt; Measurement &gt; XXX). &nbsp;You can also display
+all the
+bond lengths at once using the command line. &nbsp;The command is: "<span style="font-weight: bold;">measure allconnected (*)(*)</span>"
+See <a href="../Jmol%20Commands%20and%20Scripting/Jmol%20Commands%20and%20Scripting.html">Using
+Commands in the Script Window</a>.</p>
+<p><span style="font-weight: bold;">To measure
+bond angles</span>
+double click on the first atom. &nbsp;The cursor will convert to a
+"+".
+&nbsp;Move the cursor to the second atom. &nbsp;Click ONCE only
+on the
+second atom. &nbsp;Move to the third atom and double click on it.
+&nbsp;The angle made by these three atoms will be displayed.</p>
+<p><span style="font-weight: bold;">To measure
+dihedral angles</span>
+(the angle between two bonds on atoms separated by one bond, or more
+generally the angle between two planes defined by four selected atoms)
+double click on the first atom.
+&nbsp;The
+cursor will convert to a "+". &nbsp;Move to the second atom and
+click
+once. &nbsp;Move to the third atom and click once. &nbsp;Move
+to the
+fourth atom and double click. &nbsp;This will display the angle
+made by
+the plane defined by atoms 1, 2 &amp; 3 and the plane defined by atoms
+2, 3 &amp; 4.</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: bold;">Cartoon Views of Biomolecules</span></p>
+<div id="divDNA___LAC_repressor">
+<div id="tableDNA___LAC_repressor" class="floatRightDiv">
+<table style="text-align: left; width: 300px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; width: 300px; height: 300px;">
+<div id="Jmol4" class="JmolDiv" style="width: 300px; height: 300px; background-image: url(DNA___LAC_repressor.png);">
+<script type="text/javascript">
+putJmolDiv(4, "DNA___LAC_repressor.spt", "DNA___LAC_repressor.png", 300, 300); </script></div>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"> Figure 5:
+DNA &amp; LAC repressor binding region (<a href="1lcd.pdb1.gz">1lcd.pdb</a>
+from the <a target="_blank" href="http://www.rcsb.org">protein
+data bank</a><img alt="External Website, Opens in New Window" src="../newwindow.gif" height="13" width="16">)
+to practice cartoon rendering on. &nbsp;To make live click on the
+link in the image. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="textDNA___LAC_repressor">
+<p><span style="font-weight: bold;">To make <a name="cartoon"></a>cartoon views of biomolecules</span>
+use the pop-up menu. &nbsp;There are a large number of options.
+&nbsp;</p>
+<p>First, <span style="font-weight: bold;">select
+the part of the structure you want to work with</span>.
+&nbsp;Use the pop-up menu (Right mouse button, control-click on one
+button mice, &gt; Select &gt; <span style="font-style: italic;">choose among the options</span>.)</p>
+<p>Second <span style="font-weight: bold;">select
+the desired representation</span>. &nbsp;Use the pop-up menu
+(Right mouse button &gt; Style &gt; Scheme or Structure &gt;
+XXX).</p>
+<p>Some things to try with the model in Figure 5:</p>
+<ol>
+<li>Render the DNA as a violet cartoon:&nbsp;</li>
+<ul>
+<li>select DNA (Right mouse button &gt; Select
+&gt; Nucleic &nbsp;&gt; All).</li>
+<li>Render as cartoon (Right mouse button &gt; Style
+&gt; Scheme &gt; Cartoon).</li>
+<li>Make the cartoon violet (Right mouse button &gt;
+Color &gt; Structure &gt; Cartoon &gt; Violet).</li>
+</ul>
+<li>Render the protein as space filling with the polar
+groups in red.</li>
+<ul>
+<li>select the protein (Right mouse button &gt;
+Select &gt; Protein &gt; All).</li>
+<li>Render as spacefilling (Right mouse button &gt;
+Style &gt; Scheme &gt; CPK spacefill).</li>
+<li>Make the whole protein cyan (Right mouse button
+&gt; Color &gt; Atom &gt; Cyan).</li>
+<li>Make the polar residues red (Right mouse button
+&gt; Select &gt; Protein &gt; Polar Residues). &nbsp;Then (Right mouse button &gt; Color &gt; Atom &gt; Red).</li>
+</ul>
+<li>Render the protein as a cartoon.</li>
+<ul>
+<li>select the protein (Right mouse button &gt;
+Select &gt; Protein &gt; All).</li>
+<li>Render as cartoon (Right mouse button &gt; Style
+&gt; Scheme &gt; Cartoon).</li>
+</ul>
+</ol>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div id="authordiv" style="text-align: right;">
+Based on template by A. Herráez as modified by J. Gutow
+</div>
+<div id="creationdiv" style="text-align: right;"> <small>Page
+skeleton and JavaScript
+generated by export to web function of (<a href="http://jmol.sourceforge.net">Jmol 11.4.4 2007-12-20
+06:37</a>) on Jul 8, 2008. </small><br>
+</div>
+<div id="logdiv" style="text-align: right; display: none;">
+<pre>Using directory /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation
+adding JmolPopIn.js
+...jmolApplet0
+...adding Ethane_for_zoom.png
+...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/ethane-staggered-3-21G.log to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/ethane-staggered-3-21G.log
+...copying Jmol.js to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/Jmol.js
+...copying JmolApplet.jar to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/JmolApplet.jar
+...adding Ethane_for_zoom.spt
+...jmolApplet1
+...adding Ethane_for_spin.png
+...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/ethane-staggered-3-21G.log to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/ethane-staggered-3-21G.log
+...copying Jmol.js to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/Jmol.js
+...copying JmolApplet.jar to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/JmolApplet.jar
+...adding Ethane_for_spin.spt
+...jmolApplet2
+...adding Ethane_for_Atom_Size_and_Bond_Size.png
+...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/ethane-staggered-3-21G.log to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/ethane-staggered-3-21G.log
+...copying Jmol.js to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/Jmol.js
+...copying JmolApplet.jar to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/JmolApplet.jar
+...adding Ethane_for_Atom_Size_and_Bond_Size.spt
+...jmolApplet3
+...adding Ethane_for_measurements.png
+...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/ethane-staggered-3-21G.log to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/ethane-staggered-3-21G.log
+...copying Jmol.js to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/Jmol.js
+...copying JmolApplet.jar to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/JmolApplet.jar
+...adding Ethane_for_measurements.spt
+...jmolApplet4
+...adding DNA___LAC_repressor.png
+...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/1lcd.pdb1.gz to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/1lcd.pdb1.gz
+...copying Jmol.js to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/Jmol.js
+...copying JmolApplet.jar to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/General Jmol View Manipulation/JmolApplet.jar
+...adding DNA___LAC_repressor.spt
+</pre>
+</div>
+</body></html>

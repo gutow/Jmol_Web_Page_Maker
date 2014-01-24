@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="content-type">
+    <title>Jmol_Web_Page_Maker</title>
+    <meta content="J. Gutow" name="author">
+    <meta content="Original Home Site of the Jmol_Web_Page_Maker Java
+      Application" name="description">
+    <meta content="Jmol, interactive molecular animation, make Jmol web
+      page, making Jmol web page" name="keywords">
+  </head>
+  <body>
+    <table style="text-align: left; width: 100%;" border="1"
+      cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><!--#include virtual ="Jmol_Web_Page_Maker_Header.html"-->
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;">I have been developing tools
+            for creating web pages that use the Jmol applet for live
+            displays of molecules. &nbsp;I began developing these
+            because I wanted to reduce the amount of time I spend doing
+            repetitive tasks and make it easier for my students and
+            colleagues to make web pages that include live molecular
+            displays. &nbsp;I hope some of these tools may also make it
+            easier for people to submit live molecular visualizations
+            for inclusion in online publications. &nbsp;The tools I have
+            developed are:<br>
+            <ol>
+              <li>The "export to web..." dialog within the Jmol
+                application. &nbsp;To learn more about it see my <a
+                  href="Export_to_web_tutorial.shtml">tutorial</a> on
+                using it. &nbsp;This project is continuing to be
+                developed.</li>
+              <li>The <a
+                  href="JmolColorPicker/Jmol%20Color%20Picker%20Test.html">Jmol
+ColorPicker
+
+                  Widget</a> provides a pop-up color picker which passes
+                the user's chosen color to applet script commands that
+                take color as a parameter.&nbsp; It is now available as
+                part of item 1, for background color picking.<br>
+              </li>
+              <li>Some perl scripts and Java programs that I formerly
+                used to convert between the output of MacMolPlt and
+                Gaussian cube files. &nbsp;Development of this project
+                has ceased. &nbsp;The old files are available <a
+href="http://www.uwosh.edu/faculty_staff/gutow/Orbitals/HowTo/Jmol_to_web_java.html">here</a>.</li>
+            </ol>
+            <div style="text-align: right;"><small><small>Last Update:
+                  June 11, 2010<br>
+                  Expires: --<br>
+                  Jonathan Gutow</small></small></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" /><title>Pages_to_server</title>
+
+<meta content="J. Gutow" name="author" />
+<meta content="General instructions on installing new Jmol pages on a server" name="description" /></head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);">
+<div style="text-align: center;"><big><big><span style="font-weight: bold;">Installing Your New Page(s) on a Server</span></big></big></div>
+<dl>
+<dt>Because Jmol functionality depends on a Java applet and Javascript,
+it is only easy to install pages containing Jmol on plain vanilla web
+servers (ie. <a href="http://httpd.apache.org/" target="_blank">Apache</a>).
+&nbsp;These instructions may not work for Microsoft servers (anybody
+with access to one who tests this let me know the results). If you are
+using a content management system (CMS) these instructions are likely
+to fail&nbsp;as most CMS installations don't allow random applets or
+javascript to function within them. &nbsp;CMSs are also difficult to
+load a whole directory structure into. &nbsp;Some of the Jmol team is
+working on embedding Jmol in wikis (see the <a href="http://wiki.jmol.org" target="_blank">Jmol wiki</a> for more information). <span style="font-style: italic;">If
+you do not know how to add content to your web server you should
+discuss this with your web administrator before attempting to install
+Jmol pages.</span></dt></dl>You will need to load a number of files
+onto your server. &nbsp;The best way to accomplish this is to make an
+ftp or sftp connection to your web server. <br />Some possible software choices for file transfer are <a href="http://filezilla-project.org/" target="_blank">Filezilla</a> for Windows, MacOS or LINUX, MacOS Finder for ftp, <a href="http://rsug.itd.umich.edu/software/fugu/" target="_blank">Fugu</a> for sftp on MacOS, and the standard fileviewer in most LINUX distributions.<ol><li>Upload
+the Jmol applet onto your server in the appropriate place, usually
+somewhere near the top of the directory structure you have access to
+(see <a href="Installing_Applet.html">Installing Jmol on Your Server</a>). &nbsp;You only need to do this once or if you upgrade your Jmol applet.</li><li>Upload the directory (the whole thing, not just its contents) containing
+your web page to a location in your server directory structure so that
+the path to Jmol that you specified will be correct. &nbsp;See the <a href="Jmol_Applet_Paths.html">path to the Jmol applet</a> for more information on how to organize your server directory structure.</li></ol><hr style="width: 100%; height: 2px;" /><div style="text-align: right;"><small>Last Update: August 13, 2009<br />Expires: --<br />by J. Gutow</small></div><dl><dt></dt>
+</dl>
+</body></html>

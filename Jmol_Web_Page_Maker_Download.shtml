@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Jmol_Web_Page_Maker_Download</title>
+  <meta content="J. Gutow" name="author">
+  <meta content="Download the Jmol_Web_Page_Maker Java Application"
+ name="description">
+</head>
+<body>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><!--#include virtual ="Jmol_Web_Page_Maker_Header.html"--><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Download</span><br>
+Click on the link for what you wish to download.<br>
+      <br>
+      <table style="text-align: left; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Download Link<br>
+            </td>
+            <td style="vertical-align: top;">Description<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a
+ href="Jmol_11.3.8_JWM.jar">Jmol_11.3.8_JWM.jar</a><br>
+            </td>
+            <td style="vertical-align: top;">Jmol 11.3.8 prerelease
+version with Jmol_Web_Page_Maker included.&nbsp; Platform independent
+java binary.<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a
+ href="jmol_Web_Page_Maker_2.0.zip">org.jmol.jmol_Web_Page_Maker.zip</a><br>
+            </td>
+            <td style="vertical-align: top;">Java source and resources
+for just the Jmol_Web_Page_Maker dialog box.<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a
+ href="Jmol_Web_Page_Maker_1.0.zip">Jmol_Web_Page_Maker_1.0.zip</a><br>
+            </td>
+            <td style="vertical-align: top;">Platform independent java
+binary, license and Windows .bat file for lauching<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a
+ href="Jmol_Web_Page_Maker_1.0_full.zip">Jmol_Web_Page_Maker_1.0_full.zip</a><br>
+            </td>
+            <td style="vertical-align: top;">Includes above and all
+source code<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: right;"><small><small>Last Update: 8/7/07</small></small><span
+ style="font-weight: bold;"></span><br style="font-weight: bold;">
+      <span style="font-weight: bold;"></span></div>
+      <span style="font-weight: bold;"></span> </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

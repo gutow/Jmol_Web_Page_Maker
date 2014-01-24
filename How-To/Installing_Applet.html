@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  
+  <title>Installing Jmol on your server</title><meta content="J. Gutow" name="author">
+  <meta content="Installing Jmol applet" name="description"></head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);" link="#000099" alink="#000099" vlink="#990099"><div style="text-align: center;"><big><big><span style="font-weight: bold;">Installing the Jmol Applet on a Server</span></big></big><br></div><br>Because Jmol functionality depends on a Java applet and Javascript, it
+is only easy to install pages containing Jmol on plain vanilla web
+servers (ie. <a href="http://httpd.apache.org/" target="_blank">Apache</a>).
+&nbsp;These instructions may not work for Microsoft servers (anybody with
+access to one who tests this let me know the results). If you are using
+a content management system (CMS) these instructions are likely to
+fail&nbsp;as most CMS installations don't allow random applets or javascript
+to function within them. &nbsp;CMSs are also difficult to load a whole
+directory structure into. &nbsp;Some of the Jmol team is working on embedding
+Jmol in wikis (see the <a href="http://wiki.jmol.org/" target="_blank">Jmol wiki</a> for more information). <span style="font-style: italic;">If
+you do not know how to add content to your web server you should
+discuss this with your web administrator before attempting to install
+Jmol or pages that use Jmol.</span><br><br>You will need to load a number of files onto your server. &nbsp;The best way
+to accomplish this is to make an ftp or sftp connection to your web
+server. <br>Some possible software choices for file transfer are <a href="http://filezilla-project.org/" target="_blank">Filezilla</a> for Windows, MacOS or LINUX, MacOS Finder for ftp, <a href="http://rsug.itd.umich.edu/software/fugu/" target="_blank">Fugu</a> for sftp on MacOS, and the standard fileviewer in most LINUX distributions.<br><br>Upload
+the Jmol applet onto your server in the appropriate place, usually
+somewhere near the top of the directory structure you have access to.
+&nbsp;You only need to do this once or if you upgrade your Jmol applet.
+&nbsp;At a bare
+minimum you should install the following files in a directory dedicated
+to Jmol: Jmol.js, JmolApplet.jar, all JmolApplet0_...jar files, and
+LICENSE.txt.&nbsp; You only need to install the signed applet .jar
+files if you wish your pages to use the applet to access files on
+computers other than your server.&nbsp; Make sure you know where you
+are installing the Jmol directory as you will have to <a href="Jmol_Applet_Paths.html">specify the path to Jmol in web pages you
+create</a>.<br><hr style="width: 100%; height: 2px;"><div style="text-align: right;"><small>Last Update: August 13, 2009<br>Expires: --<br>by J. Gutow</small></div></body></html>
