@@ -343,39 +343,24 @@ instructions
               <li><a href="http://www.seamonkey-project.org/" target="_blank">SeaMonkey</a><img alt="External
                   Website, Opens in New Window" src="http://www.uwosh.edu/faculty_staff/gutow/Jmol_Web_Page_Maker/How-To/newwindow.gif" width="16" height="13">
                 (Open source.&nbsp; You must check "Preserve original 
-source formatting" in Preferences &gt; Composer.&nbsp; This is author's 
-favorite),</li>
+source formatting" in Preferences &gt; Composer.&nbsp; This is the author's 
+favorite editor),</li>
               <li><a href="http://www.w3.org/Amaya/" target="_blank">Amaya</a><img alt="External Website, Opens in New Window" src="http://www.uwosh.edu/faculty_staff/gutow/Jmol_Web_Page_Maker/How-To/newwindow.gif" width="16" height="13">
                 (open source, complete, but harder to use).</li>
             </ul>
             <li>Be
               careful when editing not to do anything to the picture of
               Jmol at right
-              or inside the boxes (tables) that will contain the
-              buttons.
+              or the buttons.
               &nbsp;It is
               possible to damage the javascript so that the page will
-              not work.</li>
-            <li>There
-              is a known problem with some of these editors messing up
-              the javascript
-              in the headers created by Jmol 11.4.4. &nbsp;This can be
-              fixed by
-              manually editing the source code. &nbsp; Search for the
-              text "one
-              file;"
-              near the top of the file. &nbsp;It will probably be at
-              line 38 or
-              so.
-              &nbsp;Replace the ";" with a &lt;return&gt; and make sure
-              that the next line is:</li>
-            <ul>
-              <li>var dataDir = "."; &nbsp;//some comments.</li>
-            </ul>
-          </ul>
-          <li>Once the page is the way you want it copy the whole
-            directory containing the file to your web server in the <a href="http://www.uwosh.edu/faculty_staff/gutow/Jmol_Web_Page_Maker/How-To/Jmol_Applet_Paths.html">appropriate
-              directory</a>.</li>
+              not work.&nbsp; Note you can safely change the name of the buttons.<br>
+</li></ul>
+          <li>Once the page is the way you want it copy everything in 
+the directory containing this file to your web server except for the 
+jsmol directory.&nbsp; Make sure to put it in the <a href="http://www.uwosh.edu/faculty_staff/gutow/Jmol_Web_Page_Maker/How-To/Jmol_Applet_Paths.html">appropriate
+              directory</a> on your server.<br>
+</li>
         </ol>
         You're done!
         <br>
