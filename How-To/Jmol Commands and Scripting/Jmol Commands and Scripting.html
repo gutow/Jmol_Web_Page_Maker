@@ -1,72 +1,183 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><!--/* Allows to open Jmol models on request, in a div
-Available from http://biomodel.uah.es/Jmol/ and http://wiki.jmol.org/ Author: Angel Herr·ez. Version 2007.04.23
-Modified by Jonathan Gutow Version 2007.07.17
-This template is offered freely for anyone to use or adapt it, according to Creative Commons Attribution-ShareAlike 3.0 License,
-http://creativecommons.org/licenses/by-sa/3.0/
-*/-->
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="generator" content="Jmol, see http://www.jmol.org">
+  <meta name="author" content="Jonathan Gutow">
+  <meta name="keywords" content="generated_by_Jmol_Webexport">
+  <title>Using Jmol/JSmol commands</title>
+  <style type="text/css">
+  #visible_page_wrapper{
+      position:absolute;
+      top:0px;
+      height:100%;
+      width:100%;
+      overflow:hidden;
+  }
+  #JSmol_loading_msg{
+      color:orange;
+  }
+  .JmolTextPane {
+      float: left;
+      width:39.5%;
+      height:99%;
+      overflow:scroll;
+      border:1px solid;
+      display:inline;
+  }
+  .JmolPane {
+      float: right;
+      width:60%;
+      height:99%;
+      overflow:hidden;
+      /*border:1px solid green;*/
+  }
+  .JmolViewerPane{
+      width:98%;
+      height:85%;
+      overflow:hidden;
+      /*border:1px solid grey;*/
+  }
+  .JmolWidgetPane {
+      width:98%;
+      height:14.5%;
+      overflow:scroll;
+      /*border:1px solid blue;*/
+  }
+  .JmolButtonDiv{
+      width:99%;
+      /*border:1px solid blue;*/
+      text-align:center;
+      /*min-height:8px;*/
+  }
+  .update-info{
+      text-align:right;
+      font-size: small;
+      font-style: italic;
+  }
+  </style>
+  <!-- Below is used locally but not on server. May generate warnings. -->
+  <script type="text/javascript" src="jsmol/JSmol.min.js"></script>
+  <script src="JmolPopIn.js" type="text/javascript"></script>
+  
+  
+  <!-- Below is used on server, but not locally. May generate warnings.-->
+  <script type="text/javascript" src="../../../Applets/JSmol/JSmol.min.js"></script>
+  <script type="text/javascript">
+  var jmolApplet; //our viewer
+  var jmolInfo; //setup parameters
+  ;(function() {
 
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1">
-<meta name="generator" content="Jmol, see http://www.jmol.org">
-<meta name="Author" content="J. Gutow">
-<meta name="keywords" content="generated_by_Jmol_Webexport"><title>Using the Jmol Script Window/Console</title>
+// Developers: The debugCode flag is checked in j2s/java/core.z.js, 
+// and, if TRUE, skips loading the core methods, forcing those
+// to be read from their individual directories. Set this
+// true if you want to do some code debugging by inserting
+// System.out.println, document.title, or alert commands
+// anywhere in the Java or Jmol code.
 
-<style type="text/css">
-/* These are important, don't change: */
-html, body { height:100%; overflow:hidden; margin:0; padding:0; }
-.JmolPanels { position:absolute; overflow:hidden;}
-.textPanels { position:absolute; overflow:auto; }
-#JmolPane {left:50%; width: 50%; top:0px; height:100%; }
-#mainPane { left:0px; width:50%; top:0px; height:100%; }
-#JmolDiv {width:100%; height:100%;}
-#Jmol0 {width:100%; height:100%;}
-/* Don't add margin or padding to textPane; if needed, use an inner div with desired style (like 'contents' below) */
-/* These are aesthetic, can be customized: */
-.content { padding:0.5em 1ex; }
-.textPanels { background-color:rgb(102, 255, 255); }
-</style>
-<script src="JmolPopIn.js" type="text/javascript"></script>
-<script type="text/javascript">
-var jmoljarpath = "../../../Applets/Java/Jmol"; // where Jmol.jar is to be found on a server
-var jmoljspath = "../../../Applets/Java/Jmol"; // where Jmol.js is to be found on a server
-var jmollocaljarpath = "../"; // where Jmol.jar is to be found locally
-var jmollocaljspath = "../"; // where Jmol.js is to be found locally
-var jmoljarfile = "JmolApplet.jar"; // "JmolApplet.jar" is everything in one file.
-var dataDir = "."; // where the model AND .spt files are to be found.
-changePathIfLocal();
-</script>
-<script type="text/javascript">
-addJavaScript(jmoljspath, "Jmol.js");
-</script>
-<script type="text/javascript">
-jmolInitialize(jmoljarpath, jmoljarfile); jmolSetDocument(0);
-</script></head>
-<body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);" onload="scriptbuttonJmol('Ethane_Default_View.spt')">
-<div id="JmolPane" class="JmolPanels">
-<div id="Jmol0" class="JmolDiv"> <img src="Ethane_Default_View.png" alt="still of jmol image" style="height: 100%; width: 100%;"> </div>
-</div>
-<div id="mainPane" class="textPanels">
-<div style="text-align: center;"></div>
-<div id="mainContent" class="content">
+var s = document.location.search;
+Jmol.debugCode = (s.indexOf("debugcode") >= 0);
+
+
+jmol_isReady = function(jmolApplet) {
+    elem = document.getElementById("JSmol_loading_msg");
+    elem.style.visibility="hidden";
+    elem.style.height="0";
+    elem.style.border="none";
+ }		
+
+
+jmolInfo = {
+	width: "100%",
+	height: "100%",
+	debug: false,
+	color: "white",
+	addSelectionOptions: false,
+	serverURL: "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php", //you can change this to your own server.
+	use: "HTML5",
+    coverImage: "Ethane_default_view.png",        // initial image instead of applet
+    coverScript: "",	// special script for click of cover image (otherwise equal to script)
+    deferApplet: false,                  // wait to load applet until click
+    deferUncover: true,                 // wait to uncover applet until script completed
+    //The paths below assume your server is set up with standard JSmol directory.  If not
+    //they will need modification for the page to work.
+    jarPath: "../../../Applets/JSmol/java", //path to applet .jar files on server.
+	j2sPath: "../../../Applets/JSmol/j2s",//path to javascript version.
+	makeLiveImg:"../../../Applets/JSmol/j2s/img/play_make_live.jpg",//path to activate 3-D image.
+	jarFile: "JmolAppletSigned0.jar",
+	isSigned: true,
+	//disableJ2SLoadMonitor: true,
+	disableInitialConsole: true,
+	readyFunction: jmol_isReady,
+	//defaultModel: "ethylene/ethylene.xyz",
+	script: "load Ethane_default_view.spt"
+}
+
+// ?_USE=JAVA   ?_USE=SIGNED   ?_USE=HTML5
+   if (s.indexOf("USE=") >= 0)
+     jmolInfo.use = s.split("USE=")[1].split("&")[0]
+   else if (s.indexOf("JAVA") >= 0)
+     jmolInfo.use = "JAVA"
+   else if (s.indexOf("IMAGE") >= 0)
+     jmolInfo.use = "IMAGE"
+   else if (s.indexOf("NOWEBGL") >= 0)
+     jmolInfo.use = "JAVA IMAGE"
+   else if (s.indexOf("WEBGL") >= 0)
+     jmolInfo.use = "WEBGL HTML5"
+   if (s.indexOf("NOWEBGL") >= 0)
+     jmolInfo.use = use.replace(/WEBGL/,"")
+   var useSignedApplet = (s.indexOf("SIGNED") >= 0);
+   if(useSignedApplet && jmolInfo.use == "HTML5") jmolInfo.use = "JAVA";
+
+   var protocol = window.location.protocol.toLowerCase();
+   if (protocol == "file:") { 
+    jmolInfo.jarPath = "jsmol/java";
+    jmolInfo.j2sPath = "jsmol/j2s";
+    jmolInfo.makeLiveImg = "jsmol/j2s/img/play_make_live.jpg";
+    jmolInfo.jarFile = "JmolAppletSigned.jar";
+    jmolInfo.isSigned= "true";
+  }
+})();
+
+Jmol.setDocument(document);
+
+// notice that we are using no document.write() function here. All DOM-based.
+// Jmol.getAppletHtml is working.
+
+$(document).ready(function(){
+    $("#Jmol1").html(Jmol.getAppletHtml("jmolApplet", jmolInfo));
+    $("#make_live_icon").attr('src',jmolInfo.makeLiveImg);
+});
+  </script>
+
+</head>
+<body>
+  <div id="visible_page_wrapper">
+    <div id="Text_Buttons" class="JmolTextPane">
+      <div id="JSmol_loading_msg">
+        Once the molecule file is fully loaded the image at right will become live.  At that time the "activate 3-D" icon
+        <img id="make_live_icon" src="" height="15px"> 
+        will disappear.<hr>
+      </div>
 <div style="text-align: center;"><big><span style="font-weight: bold;">Using Commands in the Script
 Window</span></big><br>
 </div>
-The display at right is from the file <a href="../ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>.
+
+The display at right is from the file <a href="ethane-staggered-3-21G.log">ethane-staggered-3-21G.log</a>.
 &nbsp;To follow along you can use the applet at right or download
 the
 file and open it in a copy of the Jmol application. &nbsp;<br>
+
 <br>
+
 If you are using the applet at right you can return to this view by
 clicking the button below.
-<table style="text-align: center; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td>
-<script type="text/javascript">
-document.write(jmolButton("script Ethane_Default_View.spt", "Ethane Default View")); </script></td>
-</tr>
-</tbody>
-</table>
+  <div id="Ethane_default_view" class="JmolButtonDiv">    
+    <button onclick="Jmol.script(jmolApplet,'load Ethane_default_view.spt;javascript \'updateScriptButtonWidgets(0)\';')">Ethane default view</button>
+    <div id="jmolCntl0" style="visibility:hidden; display:none;">
+      
+    </div>
+  </div>
 If you use the application get to this view
 by loading the file and navigating to the last frame using the
 pull-down menu&nbsp;(Tools &gt; Animate &gt; Once)
@@ -74,7 +185,9 @@ pull-down menu&nbsp;(Tools &gt; Animate &gt; Once)
 pop-up menu in both the application and the applet (right mouse button,
 control click on a one button mouse, &gt; Model &gt; <span style="font-style: italic;">select the last one, bottom
 choice</span>). <br>
+
 <br>
+
 <ol>
 <li><span style="font-weight: bold;">Open
 the script window</span>. &nbsp;In the application use the
@@ -90,7 +203,7 @@ looks like figure 1 and in the applet the window will look like figure
 <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
 <tbody>
 <tr>
-<td style="vertical-align: top;"><img style="border: 0px solid ; width: 100%; height: 62%;" target="_blank" alt="Script Console in Jmol Application" src="App_Script_Console.png"><br>
+<td style="vertical-align: top;"><img style="border: 0px solid ; width: 100%; height: 62%;" target="_blank" alt="Script Console in Jmol Application" src="App_Script_Console.png" width="737" height="341"><br>
 Figure 1: The script window as it appears in the Jmol application.
 &nbsp;Click <a href="App_Script_Console.png" target="_blank">here</a> to enlarge the image.</td>
 </tr>
@@ -101,113 +214,102 @@ Figure 1: The script window as it appears in the Jmol application.
 <table style="text-align: left; width: 100%;" border="0" cellpadding="0" cellspacing="0">
 <tbody>
 <tr>
-<td style="vertical-align: top;"><img style="width: 100%; height: 73%;" alt="Script Console in the Applet" src="Applet_Script_Console.png"><br>
-Figure 2: The script window as it appears in the Jmol applet.
-&nbsp;Click <a href="Applet_Script_Console.png" target="_blank">here</a> to enlarge the image.</td>
+<td style="vertical-align: top;"><img style="width: 100%; height: 73%;" alt="Script Console in the Applet" src="Applet_Script_Console.png" width="550" height="400"><br>
+Figure 2: The script window as it appears in the Jmol applet.&nbsp;
+The colors are a little different in the pure javascript (JSmol) version. Click <a href="Applet_Script_Console.png" target="_blank">here</a> to enlarge the image.</td>
 </tr>
 </tbody>
 </table>
 </div>
-</li>
-<li><span style="font-weight: bold;">Using commands</span>.
+</li><li><span style="font-weight: bold;">Using commands</span>.
 &nbsp;The script console is Jmol's command line interface.
 &nbsp;In the application version type your command after the "$"
 prompt. The command will appear red until you have typed a complete
 command. &nbsp;In the applet type the command in the bottom part of
 the window. &nbsp;There is no syntax checking in the applet.
 &nbsp;Hit the &lt;return&gt; key to activate the command.
-&nbsp;Try some of these commonly useful commands:</li>
-<ul>
-<li>"<span style="font-weight: bold;">spin on</span>"
-will cause the molecule to start spinning.</li>
-<li>"<span style="font-weight: bold;">spin off</span>"
-will stop the molecule from spinning.</li>
-<li>"<span style="font-weight: bold;">moveto 0
-{0 0 0} 0</span>" will return to the default view.</li>
-<li>"<span style="font-weight: bold;">select
-carbon</span>" will select the carbon atoms in the file.</li>
-<li>"<span style="font-weight: bold;">select
-hydrogen</span>" will select the hydrogen atoms in the file.</li>
-<li>"<span style="font-weight: bold;">select all</span>"
-will select all atoms in the file.</li>
-<li>"<span style="font-weight: bold;">select none</span>"
-will deselect all the atoms.&nbsp;</li>
-<li>"<span style="font-weight: bold;">color green</span>"
+&nbsp;Try some of these commonly useful commands:</li><ul><li>"<span style="font-weight: bold;">spin on</span>"
+will cause the molecule to start spinning.</li><li>"<span style="font-weight: bold;">spin off</span>"
+will stop the molecule from spinning.</li><li>"<span style="font-weight: bold;">moveto 0
+{0 0 0} 0</span>" will return to the default view.</li><li>"<span style="font-weight: bold;">select
+carbon</span>" will select the carbon atoms in the file.</li><li>"<span style="font-weight: bold;">select
+hydrogen</span>" will select the hydrogen atoms in the file.</li><li>"<span style="font-weight: bold;">select all</span>"
+will select all atoms in the file.</li><li>"<span style="font-weight: bold;">select none</span>"
+will deselect all the atoms.&nbsp;</li><li>"<span style="font-weight: bold;">color green</span>"
 will color all the selected atoms green. &nbsp;NOTE: you will see
 nothing if you do not select some atoms first. &nbsp;You can pick
 other
 colors as well (blue, red, orange, violet, pink, purple, cyan,
-&nbsp;magenta, indigo, yellow, gray, white, black).</li>
-<li>"<span style="font-weight: bold;">measure
+&nbsp;magenta, indigo, yellow, gray, white, black).</li><li>"<span style="font-weight: bold;">measure
 allconnected (*)(*)</span>" will display the bond lengths for all
-the bonds in the molecule.</li>
-<li>"<span style="font-weight: bold;">set echo
+the bonds in the molecule.</li><li>"<span style="font-weight: bold;">set echo
 top left; echo "myText"</span>" displays the text "myText" at
 the top left of the window. &nbsp;Position options are: top left,
 top center, top right, middle left, middle center, middle right, bottom
-left, bottom center, bottom right.</li>
-<li>"<span style="font-weight: bold;">echo ""</span>"
-will turn off which ever echo was last set.</li>
-<li>"<span style="font-weight: bold;">select
+left, bottom center, bottom right.</li><li>"<span style="font-weight: bold;">echo ""</span>"
+will turn off which ever echo was last set.</li><li>"<span style="font-weight: bold;">select
 all; label on</span>" will label all the atoms with their atomic
-symbols and atom number.</li>
-<li><span style="font-weight: bold;">"select
+symbols and atom number.</li><li><span style="font-weight: bold;">"select
 hydrogen; label off</span>" will turn off just the
-hydrogen labels made in the previous step.</li>
-<li>"<span style="font-weight: bold;">mo #</span>"
+hydrogen labels made in the previous step.</li><li>"<span style="font-weight: bold;">mo #</span>"
 where # is an integer corresponding to the index of a molecular orbital
 will display that molecular orbtial. &nbsp;The last frame of the example file
-contains mo's #1-19, try some.</li>
-<li>"<span style="font-weight: bold;">mo color
+contains mo's #1-19, try some.</li><li>"<span style="font-weight: bold;">mo color
 green yellow</span>" colors the lobes green and yellow instead of
-the default.</li>
-<li>"<span style="font-weight: bold;">mo delete</span>"
-gets rid of the mo.</li>
-<li>"<span style="font-weight: bold;">isosurface
+the default.</li><li>"<span style="font-weight: bold;">mo delete</span>"
+gets rid of the mo.</li><li>"<span style="font-weight: bold;">isosurface
 mySurface solvent</span>" displays the "molecular" surface.
 &nbsp; This surface is defined as the surface formed by rolling a
 spherical solvent "probe" around the molecule at the distance of the
 van der Waals radii of the atoms. &nbsp;By default the spherical
-probe is assumed to have a radius of 1.2 ≈.
+probe is assumed to have a radius of 1.2 √Ö.
 &nbsp;You will see
 nothing if you do not select any
-atoms.</li>
-<li>"<span style="font-weight: bold;">isosurface mySurface delete</span>" will delete the surface named&nbsp;mySurface that was
-created above.</li>
-<li>"<span style="font-weight: bold;">isosurface&nbsp;</span><span style="font-weight: bold;">mySurface</span><span style="font-weight: bold;"> off</span>" will turn the isosurface off without deleting it.</li>
-<li>"<span style="font-weight: bold;">isosurface&nbsp;</span><span style="font-weight: bold;">mySurface</span><span style="font-weight: bold;"> on"</span> will turn the isosurface back on.</li>
-<li>"<span style="font-weight: bold;">isosurface
+atoms.</li><li>"<span style="font-weight: bold;">isosurface mySurface delete</span>" will delete the surface named&nbsp;mySurface that was
+created above.</li><li>"<span style="font-weight: bold;">isosurface&nbsp;</span><span style="font-weight: bold;">mySurface</span><span style="font-weight: bold;"> off</span>" will turn the isosurface off without deleting it.</li><li>"<span style="font-weight: bold;">isosurface&nbsp;</span><span style="font-weight: bold;">mySurface</span><span style="font-weight: bold;"> on"</span> will turn the isosurface back on.</li><li>"<span style="font-weight: bold;">isosurface
 list</span>" will list the isosurfaces &nbsp;you have
-available.</li>
-</ul>
-<li>There are many more commands and the ones above have
-additional options.</li>
-<ul>
-<li><a href="../Adding%20Text%20and%20Labels/Adding%20Text%20and%20Labels.html">Adding
+available.</li></ul><li>There are many more commands and the ones above have
+additional options.</li><ul><li><a href="../Adding%20Text%20and%20Labels/Adding%20Text%20and%20Labels.html">Adding
 your own text</a> is a more extensive tutorial on using the echo
-and label commands.</li>
-<li>Detailed documentation on all commands may be found at <a href="http://chemapps.stolaf.edu/jmol/docs/" target="_blank">Bob
-Hanson's Jmol Interactive Scripting Documentation site</a><img alt="External Website, Opens in New Window" src="../newwindow.gif" height="13" width="16">.</li>
-</ul>
+and label commands.</li><li>Detailed documentation on all commands may be found at <a href="http://chemapps.stolaf.edu/jmol/docs/" target="_blank">Bob
+Hanson's Jmol Interactive Scripting Documentation site</a><img alt="External Website, Opens in New Window" src="file:///Users/gutow/Documents/Web%20Pages/Jmol_Web_Page_Maker/How-To/newwindow.gif" width="16" height="13">.</li></ul>
 </ol>
-<div id="authordiv" style="text-align: right;">
-Based on template by A. Herr·ez as modified by J. Gutow
-</div>
-<div id="creationdiv" style="text-align: right;"> <small>Page
-skeleton and <a href="http://www.java.com">JavaScript</a>
-generated by export to web function of (<a href="http://jmol.sourceforge.net">Jmol 11.5.46 2008-06-21
-05:54</a>) on Jul 14, 2008. </small><br>
-</div>
-<div id="logdiv" style="display: none;">
-<pre>Using directory /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/Jmol Commands and Scripting
-adding JmolPopIn.js
-...jmolApplet0
-...adding Ethane_Default_View.png
-...copying /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/ethane-staggered-3-21G.log to /Users/jonathan/Documents/Presentations/BCCE 2008/How-To/Jmol Commands and Scripting/ethane-staggered-3-21G.log
-...adding Ethane_Default_View.spt
+
+      <div id="authordiv" class="update-info">
+        Based on template by A. Herr√°ez as modified by J. Gutow
+       </div>
+       <div id="creationdiv" class="update-info">
+        <small>Page skeleton and JavaScript generated by export to web function using  <a href="http://jmol.sourceforge.net">Jmol 14.1.7  2014-01-22 20:25:</a>  on Jan 25, 2014.</small><br>
+       </div>
+       <div id="logdiv" style="display:none">
+         <pre>Using directory /Users/gutow/Desktop/Jmol Commands and Scripting
+  adding JmolPopIn.js
+  ...jmolApplet0
+      ...adding Ethane_default_view.png
+copying and unzipping jsmol.zip directory into /Users/gutow/Desktop/Jmol Commands and Scripting
+      ...copying
+file:/Users/gutow/Documents/Web Pages/Jmol_Web_Page_Maker/How-To/Make a ScriptButton Page/ethane-staggered-3-21G.log
+         to
+/Users/gutow/Desktop/Jmol Commands and Scripting/ethane-staggered-3-21G.log
+      ...adding Ethane_default_view.spt
+
 </pre>
-</div>
-</div>
-<!--content--></div>
-<!--mainPane-->
+
+       </div>    
+    </div>
+    <div id="Viewer_and_Widgets" class="JmolPane">
+      <div id="Jmol1" class="JmolViewerPane">This will be the viewer
+           <img src="Ethane_default_view.png" alt="still of jmol image" style="height:100%; width:100%">
+      </div>
+      <div id="JmolWidgets1" class="JmolWidgetPane">If your browser/OS combination is Java capable you will get snappier performance if you 
+      <a href="?use=JAVA">use Java.</a>
+        <div id="JmolCntl"></div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+fixScriptButtonWidgets(1);
+</script>
+
+
 </body></html>
