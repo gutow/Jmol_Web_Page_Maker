@@ -18,11 +18,11 @@ that appears with every .html page on your server.  Put the jsmol directory some
 in you server web space and then change the paths in the files to point to that.  You
 need to change the paths specified in the following lines in the .html files:
 
-<script type="text/javascript" src="../../../Applets/JSmol/JSmol.min.js"></script>
+    <script type="text/javascript" src="../../../Applets/JSmol/JSmol.min.js"></script>
 
     jarPath: "../../../Applets/JSmol/java", //path to applet .jar files on server.
-	   j2sPath: "../../../Applets/JSmol/j2s",//path to javascript version.
-	   makeLiveImg:"../../../Applets/JSmol/j2s/img/play_make_live.jpg",//path to activate 3-D image.
+    j2sPath: "../../../Applets/JSmol/j2s",//path to javascript version.
+    makeLiveImg:"../../../Applets/JSmol/j2s/img/play_make_live.jpg",//path to activate 3-D image.
 	   
 2) If you are doing a translation you may also need to change the character encoding which is in 
 one of the early meta statements of the header.
